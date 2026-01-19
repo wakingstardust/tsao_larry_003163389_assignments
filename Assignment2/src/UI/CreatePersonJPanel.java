@@ -215,7 +215,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         person.setMiddleInitial(middleInitial.charAt(0));
         person.setLastName(lastName);
         person.setAge(Integer.parseInt(age));
-        person.setMaritalStatus(maritalStatus.equalsIgnoreCase("yes"));
+        person.setMaritalStatus(maritalStatus.equals("yes"));
         
         //Step 3: pop up message appears
         JOptionPane.showMessageDialog(this, "Sucessfully Saved!");

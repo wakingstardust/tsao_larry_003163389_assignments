@@ -170,14 +170,14 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         // Step 1: collect text from the field
-        String streetName = fieldLocalAddressLine1.getText();
-        String unitNum = fieldLocalAddressLine2.getText();
+        String addressLine1 = fieldLocalAddressLine1.getText();
+        String addressLine2 = fieldLocalAddressLine2.getText();
         String city = fieldLocalCity.getText();
         String state = fieldLocalState.getText();
         String zipCode = fieldLocalZipCode.getText();
 
         // Check if any field is empty
-        if (streetName.isEmpty() || unitNum.isEmpty() || city.isEmpty() || state.isEmpty() || zipCode.isEmpty()) {
+        if (addressLine1.isEmpty() || addressLine2.isEmpty() || city.isEmpty() || state.isEmpty() || zipCode.isEmpty()) {
             JOptionPane.showMessageDialog(this, "All fields must be filled out!");
             return;
         }
@@ -191,8 +191,8 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
         }
 
         // Step 2: put the infomation to person local address
-        person.getLocalAddress().setStreetName(streetName);
-        person.getLocalAddress().setUnitNum(unitNum);
+        person.getLocalAddress().setAddressLine1(addressLine1);
+        person.getLocalAddress().setAddressLine2(addressLine2);
         person.getLocalAddress().setCity(city);
         person.getLocalAddress().setState(state);
         person.getLocalAddress().setZipCode(zipCode);

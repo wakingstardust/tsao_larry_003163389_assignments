@@ -194,14 +194,14 @@ public class CreateHomeAddressJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         // Step 1: collect text from the field
-        String streetName = fieldHomeAddressLine1.getText();
-        String unitNum = fieldHomeAddressLine2.getText();
+        String addressLine1 = fieldHomeAddressLine1.getText();
+        String addressLine2 = fieldHomeAddressLine2.getText();
         String city = fieldHomeCity.getText();
         String state = fieldHomeState.getText();
         String zipCode = fieldHomeZipCode.getText();
 
         // Check if any field is empty
-        if (streetName.isEmpty() || unitNum.isEmpty() || city.isEmpty() || state.isEmpty() || zipCode.isEmpty()) {
+        if (addressLine1.isEmpty() || addressLine2.isEmpty() || city.isEmpty() || state.isEmpty() || zipCode.isEmpty()) {
             JOptionPane.showMessageDialog(this, "All fields must be filled out!");
             return;
         }
@@ -215,8 +215,8 @@ public class CreateHomeAddressJPanel extends javax.swing.JPanel {
         } 
 
         // Step 2: put the infomation to person home address
-        person.getHomeAddress().setStreetName(streetName);
-        person.getHomeAddress().setUnitNum(unitNum);
+        person.getHomeAddress().setAddressLine1(addressLine1);
+        person.getHomeAddress().setAddressLine2(addressLine2);
         person.getHomeAddress().setCity(city);
         person.getHomeAddress().setState(state);
         person.getHomeAddress().setZipCode(zipCode);

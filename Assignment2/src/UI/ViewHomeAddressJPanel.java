@@ -25,8 +25,8 @@ public class ViewHomeAddressJPanel extends javax.swing.JPanel {
     
     
     private void display() {
-        fieldHomeAddressLine1.setText(person.getHomeAddress().getStreetName());
-        fieldHomeAddressLine2.setText(person.getHomeAddress().getUnitNum());
+        fieldHomeAddressLine1.setText(person.getHomeAddress().getAddressLine1());
+        fieldHomeAddressLine2.setText(person.getHomeAddress().getAddressLine2());
         fieldHomeCity.setText(person.getHomeAddress().getCity());
         fieldHomeState.setText(person.getHomeAddress().getState());
         fieldHomeZipCode.setText(person.getHomeAddress().getZipCode());

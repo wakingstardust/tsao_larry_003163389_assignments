@@ -182,6 +182,15 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
             return;
         }
         
+        // Make sure account number and routing number are valid long values
+        try {
+            Long.parseLong(accountNumber);
+            Long.parseLong(routingNumber);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Account Number and Routing Number must be valid numbers!");
+            return;
+        }
+        
         // Step 2: put those infomation to person bank account
         person.getBankAccount().setNickname(nickname);
         person.getBankAccount().setAccountNumber(Long.parseLong(accountNumber));

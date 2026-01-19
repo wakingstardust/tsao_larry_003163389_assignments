@@ -9,8 +9,8 @@ package Model;
  * @author wakingstardust
  */
 public class LocalAddress {
-    String streetName;
-    String unitNum;
+    String addressLine1;
+    String addressLine2;
     String city;
     String state;
     String zipCode;
@@ -19,20 +19,20 @@ public class LocalAddress {
         
     }
 
-    public String getStreetName() {
-        return streetName;
+    public String getAddressLine1() {
+        return addressLine1;
     }
 
-    public void setStreetName(String streetName) {
-        this.streetName = streetName;
+    public void setAddressLine1(String addressLine1) {
+        this.addressLine1 = addressLine1;
     }
 
-    public String getUnitNum() {
-        return unitNum;
+    public String getAddressLine2() {
+        return addressLine2;
     }
 
-    public void setUnitNum(String unitNum) {
-        this.unitNum = unitNum;
+    public void setAddressLine2(String addressLine2) {
+        this.addressLine2 = addressLine2;
     }
 
     public String getCity() {

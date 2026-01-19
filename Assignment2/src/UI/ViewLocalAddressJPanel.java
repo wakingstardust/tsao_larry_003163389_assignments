@@ -25,8 +25,8 @@ public class ViewLocalAddressJPanel extends javax.swing.JPanel {
     
     
     private void display() {
-        fieldLocalAddressLine1.setText(person.getLocalAddress().getStreetName());
-        fieldLocalAddressLine2.setText(person.getLocalAddress().getUnitNum());
+        fieldLocalAddressLine1.setText(person.getLocalAddress().getAddressLine1());
+        fieldLocalAddressLine2.setText(person.getLocalAddress().getAddressLine2());
         fieldLocalCity.setText(person.getLocalAddress().getCity());
         fieldLocalState.setText(person.getLocalAddress().getState());
         fieldLocalZipCode.setText(person.getLocalAddress().getZipCode());
