@@ -161,36 +161,16 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
         // Step 1: collect text from the field
-        String name = fieldFirstName.getText();
-        String description = fieldLastName.getText();
-        String avail = fieldAge.getText();
-        String price = fieldPrice.getText();
-        
-        String manuStreet = fieldManuStreet.getText();
-        String manuUnit = fieldManuUnit.getText();
-        String manuCity = fieldManuCity.getText();
-        String manuZipCode = fieldManuZipCode.getText();
+        String firstName = fieldFirstName.getText();
+        String lastName = fieldLastName.getText();
+        String age = fieldAge.getText();
+        String maritalStatus = fieldPrice.getText();
 
-        String shippingStreet = fieldShippingStreet.getText();
-        String shippingUnit = fieldShippingUnit.getText();
-        String shippingCity = fieldShippingCity.getText();
-        String shippingZipCode = fieldShippingZipCode.getText();
-
-        // Step 2: put those infomation to product
-        product.setName(name);
-        product.setDescription(description);
-        product.setAvailNum(avail);
-        product.setPrice(price);
-        
-        product.getManufactureAddress().setStreetName(manuStreet);
-        product.getManufactureAddress().setUnitNum(manuUnit);
-        product.getManufactureAddress().setCity(manuCity);
-        product.getManufactureAddress().setZipCode(manuZipCode);
-        
-        product.getShippingAddress().setStreetName(shippingStreet);
-        product.getShippingAddress().setUnitNum(shippingUnit);
-        product.getShippingAddress().setCity(shippingCity);
-        product.getShippingAddress().setZipCode(shippingZipCode);
+        // Step 2: put those infomation to person
+        person.setFirstName(firstName);
+        person.setLastName(lastName);
+        person.setAge(Integer.parseInt(age));
+        person.setMaritalStatus(maritalStatus.equalsIgnoreCase("yes"));
         
         //Step 3: pop up message appears
         JOptionPane.showMessageDialog(this, "Sucessfully Saved!");
@@ -200,16 +180,6 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         fieldLastName.setText("");
         fieldAge.setText("");
         fieldPrice.setText("");
-        fieldManuStreet.setText("'");
-        fieldManuUnit.setText("");
-        fieldManuCity.setText("");
-        fieldManuZipCode.setText("");
-        fieldShippingStreet.setText("");
-        fieldShippingUnit.setText("");
-        fieldShippingCity.setText("");
-        fieldShippingZipCode.setText("");
-
-               
         
     }//GEN-LAST:event_btnSaveActionPerformed
 
