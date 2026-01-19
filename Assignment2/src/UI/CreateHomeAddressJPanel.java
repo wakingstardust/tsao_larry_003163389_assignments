@@ -156,6 +156,26 @@ public class CreateHomeAddressJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void fieldHomeAddressLine1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldHomeAddressLine1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldHomeAddressLine1ActionPerformed
+
+    private void fieldHomeAddressLine2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldHomeAddressLine2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldHomeAddressLine2ActionPerformed
+
+    private void fieldHomeCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldHomeCityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldHomeCityActionPerformed
+
+    private void fieldHomeStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldHomeStateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldHomeStateActionPerformed
+
+    private void fieldHomeZipCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldHomeZipCodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldHomeZipCodeActionPerformed
+
     private void fieldUnitNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldUnitNumActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldUnitNumActionPerformed

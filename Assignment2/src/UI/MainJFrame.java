@@ -44,7 +44,6 @@ public class MainJFrame extends javax.swing.JFrame {
         workArea = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.BorderLayout());
 
         controlPanel.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -138,9 +137,9 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnViewPerson, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addComponent(btnCreateHomeAddress)
+                .addComponent(btnCreateHomeAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnViewHomeAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnViewHomeAddress)
                 .addGap(27, 27, 27)
                 .addComponent(btnCreateLocalAddress)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -151,6 +150,8 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(btnViewPerson2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(124, Short.MAX_VALUE))
         );
+
+        controlPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCreateBankAccount, btnCreateHomeAddress, btnCreateLocalAddress, btnCreatePerson, btnViewHomeAddress, btnViewLocalAddress, btnViewPerson, btnViewPerson2});
 
         splitPane.setLeftComponent(controlPanel);
 

@@ -158,13 +158,13 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fieldBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldBalanceActionPerformed
+    private void fieldBankNicknameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldBankNicknameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldBalanceActionPerformed
+    }//GEN-LAST:event_fieldBankNicknameActionPerformed
 
-    private void fieldAccountTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAccountTypeActionPerformed
+    private void fieldBankAccountTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldBankAccountTypeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldAccountTypeActionPerformed
+    }//GEN-LAST:event_fieldBankAccountTypeActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
@@ -194,17 +194,17 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
         fieldBankName.setText("");
     }//GEN-LAST:event_btnSaveActionPerformed
 
-    private void fieldAccountNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAccountNumberActionPerformed
+    private void fieldBankAccountNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldBankAccountNumberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldAccountNumberActionPerformed
+    }//GEN-LAST:event_fieldBankAccountNumberActionPerformed
 
     private void fieldBankNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldBankNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldBankNameActionPerformed
 
-    private void fieldRoutingNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldRoutingNumberActionPerformed
+    private void fieldBankRoutingNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldBankRoutingNumberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldRoutingNumberActionPerformed
+    }//GEN-LAST:event_fieldBankRoutingNumberActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

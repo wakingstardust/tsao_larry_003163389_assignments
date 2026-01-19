@@ -75,21 +75,21 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="lblHeader" min="-2" pref="59" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnCreatePerson" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnCreatePerson" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnViewPerson" min="-2" pref="23" max="-2" attributes="0"/>
+                      <Component id="btnViewPerson" linkSize="1" min="-2" pref="23" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="btnCreateHomeAddress" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnCreateHomeAddress" linkSize="1" min="-2" pref="23" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnViewHomeAddress" min="-2" pref="23" max="-2" attributes="0"/>
+                      <Component id="btnViewHomeAddress" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="btnCreateLocalAddress" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnCreateLocalAddress" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnViewLocalAddress" min="-2" pref="23" max="-2" attributes="0"/>
+                      <Component id="btnViewLocalAddress" linkSize="1" min="-2" pref="23" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="btnCreateBankAccount" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnCreateBankAccount" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnViewPerson2" min="-2" pref="23" max="-2" attributes="0"/>
+                      <Component id="btnViewPerson2" linkSize="1" min="-2" pref="23" max="-2" attributes="0"/>
                       <EmptySpace pref="124" max="32767" attributes="0"/>
                   </Group>
               </Group>

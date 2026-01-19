@@ -25,20 +25,11 @@ public class ViewBankAccountJPanel extends javax.swing.JPanel {
     
     
     private void display() {
-        fieldName.setText(product.getName());
-        fieldName.setText(product.getName());
-        fieldDescription.setText(product.getDescription());
-        fieldAvailability.setText(product.getAvailNum());
-        fieldPrice.setText(product.getPrice());
-        fieldManuStreet.setText(product.getManufactureAddress().getStreetName());
-        fieldManuUnit.setText(product.getManufactureAddress().getUnitNum());
-        fieldManuCity.setText(product.getManufactureAddress().getCity());
-        fieldManuZipCode.setText(product.getManufactureAddress().getZipCode());
-        fieldShippingStreet.setText(product.getShippingAddress().getStreetName());
-        fieldShippingUnit.setText(product.getShippingAddress().getUnitNum());
-        fieldShippingCity.setText(product.getShippingAddress().getCity());
-        fieldShippingZipCode.setText(product.getShippingAddress().getZipCode());
-        
+        fieldBankNickname.setText(person.getBankAccount().getNickname());
+        fieldBankAccountNumber.setText(person.getBankAccount().getAccountNumber());
+        fieldBankRoutingNumber.setText(person.getBankAccount().getRoutingNumber());
+        fieldBankAccountType.setText(person.getBankAccount().getAccountType());
+        fieldBankName.setText(person.getBankAccount().getBankName());
        }
 
     /**
