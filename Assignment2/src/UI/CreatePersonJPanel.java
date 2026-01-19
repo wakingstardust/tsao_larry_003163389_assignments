@@ -36,10 +36,12 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         fieldFirstName = new javax.swing.JTextField();
         lblLastName = new javax.swing.JLabel();
         fieldLastName = new javax.swing.JTextField();
+        lblMiddleInitial = new javax.swing.JLabel();
+        fieldMiddleInitial = new javax.swing.JTextField();
         lblAge = new javax.swing.JLabel();
         fieldAge = new javax.swing.JTextField();
         lblMaritalStatus = new javax.swing.JLabel();
-        fieldPrice = new javax.swing.JTextField();
+        fieldMaritalStatus = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 204, 255));
@@ -63,6 +65,14 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblMiddleInitial.setText("Middle Inital");
+
+        fieldMiddleInitial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldMiddleInitialActionPerformed(evt);
+            }
+        });
+
         lblAge.setText("Age");
 
         fieldAge.addActionListener(new java.awt.event.ActionListener() {
@@ -73,9 +83,9 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
 
         lblMaritalStatus.setText("Marital Status (Yes or No)");
 
-        fieldPrice.addActionListener(new java.awt.event.ActionListener() {
+        fieldMaritalStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldPriceActionPerformed(evt);
+                fieldMaritalStatusActionPerformed(evt);
             }
         });
 
@@ -91,33 +101,36 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblLastName)
-                    .addComponent(lblFirstName)
-                    .addComponent(lblAge)
-                    .addComponent(lblMaritalStatus))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(fieldPrice, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                    .addComponent(fieldAge, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                    .addComponent(fieldFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                    .addComponent(fieldLastName))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
+                .addGap(93, 93, 93)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(195, 195, 195)
+                        .addGap(99, 99, 99)
                         .addComponent(lblTitle))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(239, 239, 239)
-                        .addComponent(btnSave)))
-                .addGap(29, 211, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblLastName)
+                                .addComponent(lblFirstName)
+                                .addComponent(lblMaritalStatus))
+                            .addComponent(lblAge, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblMiddleInitial, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(fieldFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                            .addComponent(fieldMaritalStatus)
+                            .addComponent(fieldMiddleInitial)
+                            .addComponent(fieldAge)
+                            .addComponent(fieldLastName))))
+                .addContainerGap(108, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(238, 238, 238)
+                .addComponent(btnSave)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(91, 91, 91)
+                .addGap(63, 63, 63)
                 .addComponent(lblTitle)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -129,15 +142,19 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
                     .addComponent(fieldLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAge)
-                    .addComponent(fieldAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblMiddleInitial)
+                    .addComponent(fieldMiddleInitial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAge)
+                    .addComponent(fieldAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblMaritalStatus)
-                    .addComponent(fieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                    .addComponent(fieldMaritalStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(88, 88, 88)
                 .addComponent(btnSave)
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -153,21 +170,49 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldAgeActionPerformed
 
-    private void fieldPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPriceActionPerformed
+    private void fieldMiddleInitialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldMiddleInitialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldPriceActionPerformed
+    }//GEN-LAST:event_fieldMiddleInitialActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         
         // Step 1: collect text from the field
         String firstName = fieldFirstName.getText();
+        String middleInitial = fieldMiddleInitial.getText();
         String lastName = fieldLastName.getText();
         String age = fieldAge.getText();
-        String maritalStatus = fieldPrice.getText();
+        String maritalStatus = fieldMaritalStatus.getText();
+
+        // Check if any field is empty
+        if (firstName.isEmpty() || middleInitial.isEmpty() || lastName.isEmpty() || age.isEmpty() || maritalStatus.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "All fields must be filled out!");
+            return;
+        }
+        
+        // Validate middle initial is only one character
+        if (middleInitial.length() != 1) {
+            JOptionPane.showMessageDialog(this, "Middle Initial must be exactly one character!");
+            return;
+        }
+        
+        // Validate age is a number
+        try {
+            Integer.parseInt(age);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Age must be a valid number!");
+            return;
+        }
+        
+        // Validate marital status is yes or no
+        if (!maritalStatus.equalsIgnoreCase("yes") && !maritalStatus.equalsIgnoreCase("no")) {
+            JOptionPane.showMessageDialog(this, "Marital Status must be 'Yes' or 'No'!");
+            return;
+        }
 
         // Step 2: put those infomation to person
         person.setFirstName(firstName);
+        person.setMiddleInitial(middleInitial.charAt(0));
         person.setLastName(lastName);
         person.setAge(Integer.parseInt(age));
         person.setMaritalStatus(maritalStatus.equalsIgnoreCase("yes"));
@@ -177,11 +222,16 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         
         //Step 4: clear all fields
         fieldFirstName.setText("");
+        fieldMiddleInitial.setText("");
         fieldLastName.setText("");
         fieldAge.setText("");
-        fieldPrice.setText("");
+        fieldMaritalStatus.setText("");
         
     }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void fieldMaritalStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldMaritalStatusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldMaritalStatusActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -189,11 +239,13 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField fieldAge;
     private javax.swing.JTextField fieldFirstName;
     private javax.swing.JTextField fieldLastName;
-    private javax.swing.JTextField fieldPrice;
+    private javax.swing.JTextField fieldMaritalStatus;
+    private javax.swing.JTextField fieldMiddleInitial;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblFirstName;
     private javax.swing.JLabel lblLastName;
     private javax.swing.JLabel lblMaritalStatus;
+    private javax.swing.JLabel lblMiddleInitial;
     private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
 }

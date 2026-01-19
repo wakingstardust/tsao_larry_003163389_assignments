@@ -103,32 +103,34 @@ public class CreateHomeAddressJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
-                        .addComponent(lblTitle))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(223, 223, 223)
                         .addComponent(btnSave))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(129, 129, 129)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblHomeAddressLine2)
-                            .addComponent(lblHomeAddressLine1)
-                            .addComponent(lblHomeCity)
-                            .addComponent(lblHomeState)
-                            .addComponent(lblHomeZipCode))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(fieldHomeState)
-                            .addComponent(fieldHomeCity)
-                            .addComponent(fieldHomeAddressLine1)
-                            .addComponent(fieldHomeAddressLine2)
-                            .addComponent(fieldHomeZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(146, Short.MAX_VALUE))
+                        .addGap(127, 127, 127)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(lblTitle))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblHomeAddressLine2)
+                                    .addComponent(lblHomeAddressLine1)
+                                    .addComponent(lblHomeCity)
+                                    .addComponent(lblHomeState)
+                                    .addComponent(lblHomeZipCode))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(fieldHomeState)
+                                    .addComponent(fieldHomeCity)
+                                    .addComponent(fieldHomeAddressLine1)
+                                    .addComponent(fieldHomeAddressLine2)
+                                    .addComponent(fieldHomeZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(148, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(91, 91, 91)
+                .addGap(74, 74, 74)
                 .addComponent(lblTitle)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -150,7 +152,7 @@ public class CreateHomeAddressJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHomeZipCode)
                     .addComponent(fieldHomeZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(72, 72, 72)
+                .addGap(89, 89, 89)
                 .addComponent(btnSave)
                 .addContainerGap(96, Short.MAX_VALUE))
         );
@@ -197,6 +199,12 @@ public class CreateHomeAddressJPanel extends javax.swing.JPanel {
         String city = fieldHomeCity.getText();
         String state = fieldHomeState.getText();
         String zipCode = fieldHomeZipCode.getText();
+
+        // Check if any field is empty
+        if (streetName.isEmpty() || unitNum.isEmpty() || city.isEmpty() || state.isEmpty() || zipCode.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "All fields must be filled out!");
+            return;
+        }
 
         // Step 2: put those infomation to person home address
         person.getHomeAddress().setStreetName(streetName);

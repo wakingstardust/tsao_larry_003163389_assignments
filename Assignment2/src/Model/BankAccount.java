@@ -10,8 +10,8 @@ package Model;
  */
 public class BankAccount {
     String nickname;
-    String accountNumber;
-    String routingNumber;
+    long accountNumber;
+    long routingNumber;
     String accountType;
     String bankName;
     
@@ -27,19 +27,19 @@ public class BankAccount {
         this.nickname = nickname;
     }
 
-    public String getAccountNumber() {
+    public long getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(String accountNumber) {
+    public void setAccountNumber(long accountNumber) {
         this.accountNumber = accountNumber;
     }
 
-    public String getRoutingNumber() {
+    public long getRoutingNumber() {
         return routingNumber;
     }
 
-    public void setRoutingNumber(String routingNumber) {
+    public void setRoutingNumber(long routingNumber) {
         this.routingNumber = routingNumber;
     }
 

@@ -103,11 +103,11 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
+                        .addGap(235, 235, 235)
+                        .addComponent(btnSave))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(195, 195, 195)
-                                .addComponent(btnSave))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(lblBankAccountType)
@@ -121,16 +121,16 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
                                     .addComponent(fieldBankAccountNumber)
                                     .addComponent(fieldBankNickname)
                                     .addComponent(fieldBankAccountType)
-                                    .addComponent(fieldBankName, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addComponent(lblTitle)))
-                .addContainerGap(99, Short.MAX_VALUE))
+                                    .addComponent(fieldBankName, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(106, 106, 106)
+                                .addComponent(lblTitle)))))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(91, 91, 91)
+                .addGap(82, 82, 82)
                 .addComponent(lblTitle)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -152,7 +152,7 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblBankName)
                     .addComponent(fieldBankName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49)
+                .addGap(58, 58, 58)
                 .addComponent(btnSave)
                 .addContainerGap(126, Short.MAX_VALUE))
         );
@@ -176,10 +176,25 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
         String accountType = fieldBankAccountType.getText();
         String bankName = fieldBankName.getText();
 
+        // Check if any field is empty
+        if (nickname.isEmpty() || accountNumber.isEmpty() || routingNumber.isEmpty() || accountType.isEmpty() || bankName.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "All fields must be filled out!");
+            return;
+        }
+        
+        // Validate account number and routing number are valid long numbers
+        try {
+            Long.parseLong(accountNumber);
+            Long.parseLong(routingNumber);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Account Number and Routing Number must be valid numbers!");
+            return;
+        }
+
         // Step 2: put those infomation to person bank account
         person.getBankAccount().setNickname(nickname);
-        person.getBankAccount().setAccountNumber(accountNumber);
-        person.getBankAccount().setRoutingNumber(routingNumber);
+        person.getBankAccount().setAccountNumber(Long.parseLong(accountNumber));
+        person.getBankAccount().setRoutingNumber(Long.parseLong(routingNumber));
         person.getBankAccount().setAccountType(accountType);
         person.getBankAccount().setBankName(bankName);
 

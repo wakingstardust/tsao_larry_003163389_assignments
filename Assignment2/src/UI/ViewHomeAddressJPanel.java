@@ -41,38 +41,22 @@ public class ViewHomeAddressJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblHomeState = new javax.swing.JLabel();
-        fieldHomeState = new javax.swing.JTextField();
-        fieldHomeZipCode = new javax.swing.JTextField();
         lblTitle = new javax.swing.JLabel();
-        lblHomeZipCode = new javax.swing.JLabel();
         lblHomeAddressLine1 = new javax.swing.JLabel();
         fieldHomeAddressLine1 = new javax.swing.JTextField();
         lblHomeAddressLine2 = new javax.swing.JLabel();
         fieldHomeAddressLine2 = new javax.swing.JTextField();
+        lblHomeState = new javax.swing.JLabel();
+        fieldHomeState = new javax.swing.JTextField();
+        lblHomeZipCode = new javax.swing.JLabel();
+        fieldHomeZipCode = new javax.swing.JTextField();
         lblHomeCity = new javax.swing.JLabel();
         fieldHomeCity = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 255, 204));
 
-        lblHomeState.setText("State (CA)");
-
-        fieldHomeState.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldHomeStateActionPerformed(evt);
-            }
-        });
-
-        fieldHomeZipCode.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldHomeZipCodeActionPerformed(evt);
-            }
-        });
-
         lblTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         lblTitle.setText("View Home Address");
-
-        lblHomeZipCode.setText("Zip Code");
 
         lblHomeAddressLine1.setText("Address Line 1");
 
@@ -90,6 +74,22 @@ public class ViewHomeAddressJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblHomeState.setText("State (CA)");
+
+        fieldHomeState.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldHomeStateActionPerformed(evt);
+            }
+        });
+
+        lblHomeZipCode.setText("Zip Code");
+
+        fieldHomeZipCode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldHomeZipCodeActionPerformed(evt);
+            }
+        });
+
         lblHomeCity.setText("City");
 
         fieldHomeCity.addActionListener(new java.awt.event.ActionListener() {
@@ -103,56 +103,51 @@ public class ViewHomeAddressJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(155, Short.MAX_VALUE)
-                .addComponent(lblTitle)
-                .addGap(152, 152, 152))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(138, 138, 138)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(lblHomeAddressLine2)
-                        .addComponent(lblHomeAddressLine1)
-                        .addComponent(lblHomeCity)
-                        .addComponent(lblHomeState)
-                        .addComponent(lblHomeZipCode))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(fieldHomeState)
-                        .addComponent(fieldHomeCity)
-                        .addComponent(fieldHomeAddressLine1)
-                        .addComponent(fieldHomeAddressLine2)
-                        .addComponent(fieldHomeZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(149, Short.MAX_VALUE)))
+                .addContainerGap(138, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblHomeAddressLine2)
+                            .addComponent(lblHomeAddressLine1)
+                            .addComponent(lblHomeCity)
+                            .addComponent(lblHomeState)
+                            .addComponent(lblHomeZipCode))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(fieldHomeState)
+                            .addComponent(fieldHomeCity)
+                            .addComponent(fieldHomeAddressLine1)
+                            .addComponent(fieldHomeAddressLine2)
+                            .addComponent(fieldHomeZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(lblTitle))
+                .addGap(149, 149, 149))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(144, 144, 144)
+                .addGap(73, 73, 73)
                 .addComponent(lblTitle)
-                .addContainerGap(326, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(192, 192, 192)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblHomeAddressLine1)
-                        .addComponent(fieldHomeAddressLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblHomeAddressLine2)
-                        .addComponent(fieldHomeAddressLine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblHomeCity)
-                        .addComponent(fieldHomeCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblHomeState)
-                        .addComponent(fieldHomeState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblHomeZipCode)
-                        .addComponent(fieldHomeZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(145, Short.MAX_VALUE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblHomeAddressLine1)
+                    .addComponent(fieldHomeAddressLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblHomeAddressLine2)
+                    .addComponent(fieldHomeAddressLine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblHomeCity)
+                    .addComponent(fieldHomeCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblHomeState)
+                    .addComponent(fieldHomeState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblHomeZipCode)
+                    .addComponent(fieldHomeZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(216, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

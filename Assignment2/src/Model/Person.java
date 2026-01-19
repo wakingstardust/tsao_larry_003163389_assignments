@@ -10,6 +10,7 @@ package Model;
  */
 public class Person {
     String firstName;
+    char middleInitial;
     String lastName;
     int age;
     boolean maritalStatus;
@@ -29,6 +30,14 @@ public class Person {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public char getMiddleInitial() {
+        return middleInitial;
+    }
+
+    public void setMiddleInitial(char middleInitial) {
+        this.middleInitial = middleInitial;
     }
 
     public String getLastName() {

@@ -26,9 +26,10 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
     
     private void display() {
         fieldFirstName.setText(person.getFirstName());
+        fieldMiddleInitial.setText(String.valueOf(person.getMiddleInitial()));
         fieldLastName.setText(person.getLastName());
         fieldAge.setText(String.valueOf(person.getAge()));
-        fieldPrice.setText(person.isMaritalStatus() ? "Yes" : "No");
+        fieldMaritalStatus.setText(person.isMaritalStatus() ? "Yes" : "No");
        }
 
     /**
@@ -40,23 +41,44 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblLastName = new javax.swing.JLabel();
-        fieldLastName = new javax.swing.JTextField();
-        lblAge = new javax.swing.JLabel();
-        fieldAge = new javax.swing.JTextField();
-        lblMaritalStatus = new javax.swing.JLabel();
-        fieldPrice = new javax.swing.JTextField();
         lblTitle = new javax.swing.JLabel();
         lblFirstName = new javax.swing.JLabel();
         fieldFirstName = new javax.swing.JTextField();
+        lblLastName = new javax.swing.JLabel();
+        fieldLastName = new javax.swing.JTextField();
+        lblMiddleInitial = new javax.swing.JLabel();
+        fieldMiddleInitial = new javax.swing.JTextField();
+        lblAge = new javax.swing.JLabel();
+        fieldAge = new javax.swing.JTextField();
+        lblMaritalStatus = new javax.swing.JLabel();
+        fieldMaritalStatus = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(204, 204, 255));
+
+        lblTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblTitle.setText("View Person");
+
+        lblFirstName.setText("First Name");
+
+        fieldFirstName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldFirstNameActionPerformed(evt);
+            }
+        });
 
         lblLastName.setText("Last Name");
 
         fieldLastName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldLastNameActionPerformed(evt);
+            }
+        });
+
+        lblMiddleInitial.setText("Middle Inital");
+
+        fieldMiddleInitial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldMiddleInitialActionPerformed(evt);
             }
         });
 
@@ -70,20 +92,9 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
 
         lblMaritalStatus.setText("Marital Status (Yes or No)");
 
-        fieldPrice.addActionListener(new java.awt.event.ActionListener() {
+        fieldMaritalStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldPriceActionPerformed(evt);
-            }
-        });
-
-        lblTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        lblTitle.setText("View Person");
-
-        lblFirstName.setText("First Name");
-
-        fieldFirstName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldFirstNameActionPerformed(evt);
+                fieldMaritalStatusActionPerformed(evt);
             }
         });
 
@@ -92,28 +103,32 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(94, 94, 94)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblLastName)
-                    .addComponent(lblFirstName)
-                    .addComponent(lblAge)
-                    .addComponent(lblMaritalStatus))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(fieldPrice)
-                    .addComponent(fieldAge)
-                    .addComponent(fieldFirstName)
-                    .addComponent(fieldLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(134, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblTitle)
-                .addGap(192, 192, 192))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(195, 195, 195)
+                        .addComponent(lblTitle))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblLastName)
+                                .addComponent(lblFirstName)
+                                .addComponent(lblMaritalStatus))
+                            .addComponent(lblAge, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblMiddleInitial, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(fieldFirstName)
+                            .addComponent(fieldMaritalStatus)
+                            .addComponent(fieldMiddleInitial)
+                            .addComponent(fieldAge)
+                            .addComponent(fieldLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(159, 159, 159)
+                .addGap(71, 71, 71)
                 .addComponent(lblTitle)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -125,15 +140,27 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
                     .addComponent(fieldLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAge)
-                    .addComponent(fieldAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblMiddleInitial)
+                    .addComponent(fieldMiddleInitial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAge)
+                    .addComponent(fieldAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblMaritalStatus)
-                    .addComponent(fieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(165, Short.MAX_VALUE))
+                    .addComponent(fieldMaritalStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(218, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void fieldMaritalStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldMaritalStatusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldMaritalStatusActionPerformed
+
+    private void fieldFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldFirstNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldFirstNameActionPerformed
 
     private void fieldLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldLastNameActionPerformed
         // TODO add your handling code here:
@@ -143,24 +170,22 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldAgeActionPerformed
 
-    private void fieldPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPriceActionPerformed
+    private void fieldMiddleInitialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldMiddleInitialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldPriceActionPerformed
-
-    private void fieldFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldFirstNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fieldFirstNameActionPerformed
+    }//GEN-LAST:event_fieldMiddleInitialActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField fieldAge;
     private javax.swing.JTextField fieldFirstName;
     private javax.swing.JTextField fieldLastName;
-    private javax.swing.JTextField fieldPrice;
+    private javax.swing.JTextField fieldMaritalStatus;
+    private javax.swing.JTextField fieldMiddleInitial;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblFirstName;
     private javax.swing.JLabel lblLastName;
     private javax.swing.JLabel lblMaritalStatus;
+    private javax.swing.JLabel lblMiddleInitial;
     private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
 

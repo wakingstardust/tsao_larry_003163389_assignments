@@ -101,34 +101,36 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(223, 223, 223)
+                        .addComponent(btnSave))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(136, 136, 136)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblLocalAddressLine2)
-                            .addComponent(lblLocalAddressLine1)
-                            .addComponent(lblLocalCity)
-                            .addComponent(lblLocalState)
-                            .addComponent(lblLocalZipCode))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(fieldLocalState)
-                            .addComponent(fieldLocalCity)
-                            .addComponent(fieldLocalAddressLine1)
-                            .addComponent(fieldLocalAddressLine2)
-                            .addComponent(fieldLocalZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(137, 137, 137)
-                            .addComponent(lblTitle))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(223, 223, 223)
-                            .addComponent(btnSave))))
-                .addContainerGap(152, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblLocalAddressLine2)
+                                    .addComponent(lblLocalAddressLine1)
+                                    .addComponent(lblLocalCity)
+                                    .addComponent(lblLocalState)
+                                    .addComponent(lblLocalZipCode))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(fieldLocalState)
+                                    .addComponent(fieldLocalCity)
+                                    .addComponent(fieldLocalAddressLine1)
+                                    .addComponent(fieldLocalAddressLine2)
+                                    .addComponent(fieldLocalZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(lblTitle)))))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(91, 91, 91)
+                .addGap(65, 65, 65)
                 .addComponent(lblTitle)
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -150,7 +152,7 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblLocalZipCode)
                     .addComponent(fieldLocalZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(61, 61, 61)
+                .addGap(87, 87, 87)
                 .addComponent(btnSave)
                 .addContainerGap(96, Short.MAX_VALUE))
         );
@@ -174,15 +176,11 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
         String state = fieldLocalState.getText();
         String zipCode = fieldLocalZipCode.getText();
 
-        // Step 2: put those infomation to person local address
-        person.getLocalAddress().setStreetName(streetName);
-        person.getLocalAddress().setUnitNum(unitNum);
-        person.getLocalAddress().setCity(city);
-        person.getLocalAddress().setState(state);
-        person.getLocalAddress().setZipCode(zipCode);
-
-        //Step 3: pop up message appears
-        JOptionPane.showMessageDialog(this, "Sucessfully Saved!");
+        // Check if any field is empty
+        if (streetName.isEmpty() || unitNum.isEmpty() || city.isEmpty() || state.isEmpty() || zipCode.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "All fields must be filled out!");
+            return;
+        }
 
         //Step 4: clear all fields
         fieldLocalAddressLine1.setText("");
