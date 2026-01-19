@@ -10,13 +10,13 @@ import Model.Product;
  *
  * @author wakingstardust
  */
-public class ViewJPanel extends javax.swing.JPanel {
+public class ViewHomeAddressJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form ViewJPanel
      */
     Product product;
-    public ViewJPanel(Product p) {
+    public ViewHomeAddressJPanel(Product p) {
         initComponents();
         product = p;
         display();

@@ -11,13 +11,13 @@ import javax.swing.JOptionPane;
  *
  * @author wakingstardust
  */
-public class CreateJPanel extends javax.swing.JPanel {
+public class CreateBankAccountJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form CreateJPanel
      */
     Product product; 
-    public CreateJPanel(Product p) {
+    public CreateBankAccountJPanel(Product p) {
         initComponents();
         product = p;
     }
