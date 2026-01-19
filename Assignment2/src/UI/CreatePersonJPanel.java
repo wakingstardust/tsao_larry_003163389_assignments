@@ -205,7 +205,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         }
         
         // Validate marital status is yes or no
-        if (!maritalStatus.equalsIgnoreCase("yes") && !maritalStatus.equalsIgnoreCase("no")) {
+        if (!maritalStatus.equals("yes") && !maritalStatus.equals("no")) {
             JOptionPane.showMessageDialog(this, "Marital Status must be 'Yes' or 'No'!");
             return;
         }

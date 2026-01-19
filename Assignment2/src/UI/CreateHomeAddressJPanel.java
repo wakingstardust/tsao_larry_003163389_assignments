@@ -205,8 +205,16 @@ public class CreateHomeAddressJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "All fields must be filled out!");
             return;
         }
+        
+         // Make sure the zip code is valid
+        try {
+            Integer.parseInt(zipCode);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Zip Code must be a valid number!");
+            return;
+        } 
 
-        // Step 2: put those infomation to person home address
+        // Step 2: put the infomation to person home address
         person.getHomeAddress().setStreetName(streetName);
         person.getHomeAddress().setUnitNum(unitNum);
         person.getHomeAddress().setCity(city);

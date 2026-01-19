@@ -181,6 +181,24 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "All fields must be filled out!");
             return;
         }
+        
+         // Make sure the zip code is valid
+        try {
+            Integer.parseInt(zipCode);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Zip Code must be a valid number!");
+            return;
+        }
+
+        // Step 2: put the infomation to person local address
+        person.getLocalAddress().setStreetName(streetName);
+        person.getLocalAddress().setUnitNum(unitNum);
+        person.getLocalAddress().setCity(city);
+        person.getLocalAddress().setState(state);
+        person.getLocalAddress().setZipCode(zipCode);
+
+        //Step 3: pop up message appears
+        JOptionPane.showMessageDialog(this, "Sucessfully Saved!");
 
         //Step 4: clear all fields
         fieldLocalAddressLine1.setText("");
