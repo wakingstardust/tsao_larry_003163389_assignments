@@ -9,14 +9,22 @@ package Model;
  * @author wakingstardust
  */
 public class BankAccount {
+    String nickname;
     String accountNumber;
     String routingNumber;
-    double balance;
     String accountType;
     String bankName;
     
     public BankAccount(){
         
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
     public String getAccountNumber() {
@@ -33,14 +41,6 @@ public class BankAccount {
 
     public void setRoutingNumber(String routingNumber) {
         this.routingNumber = routingNumber;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
     }
 
     public String getAccountType() {

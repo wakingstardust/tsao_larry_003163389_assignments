@@ -31,34 +31,20 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        fieldAge = new javax.swing.JTextField();
-        lblMaritalStatus = new javax.swing.JLabel();
-        fieldPrice = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
         lblTitle = new javax.swing.JLabel();
-        lblFirstName = new javax.swing.JLabel();
-        fieldFirstName = new javax.swing.JTextField();
-        fieldPrice1 = new javax.swing.JTextField();
-        lblMaritalStatus1 = new javax.swing.JLabel();
-        lblLastName = new javax.swing.JLabel();
-        fieldLastName = new javax.swing.JTextField();
-        lblAge = new javax.swing.JLabel();
+        lblLocalAddressLine1 = new javax.swing.JLabel();
+        fieldLocalAddressLine1 = new javax.swing.JTextField();
+        lblLocalAddressLine2 = new javax.swing.JLabel();
+        fieldLocalAddressLine2 = new javax.swing.JTextField();
+        lblLocalCity = new javax.swing.JLabel();
+        fieldLocalCity = new javax.swing.JTextField();
+        lblLocalState = new javax.swing.JLabel();
+        fieldLocalState = new javax.swing.JTextField();
+        fieldLocalZipCode = new javax.swing.JTextField();
+        lblLocalZipCode = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 204, 204));
-
-        fieldAge.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldAgeActionPerformed(evt);
-            }
-        });
-
-        lblMaritalStatus.setText("Marital Status (Yes or No)");
-
-        fieldPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldPriceActionPerformed(evt);
-            }
-        });
 
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -70,60 +56,73 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
         lblTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         lblTitle.setText("Create Local Address");
 
-        lblFirstName.setText("First Name");
+        lblLocalAddressLine1.setText("Address Line 1");
 
-        fieldFirstName.addActionListener(new java.awt.event.ActionListener() {
+        fieldLocalAddressLine1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldFirstNameActionPerformed(evt);
+                fieldLocalAddressLine1ActionPerformed(evt);
             }
         });
 
-        fieldPrice1.addActionListener(new java.awt.event.ActionListener() {
+        lblLocalAddressLine2.setText("Address Line 2");
+
+        fieldLocalAddressLine2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldPrice1ActionPerformed(evt);
+                fieldLocalAddressLine2ActionPerformed(evt);
             }
         });
 
-        lblMaritalStatus1.setText("Marital Status (Yes or No)");
+        lblLocalCity.setText("City");
 
-        lblLastName.setText("Last Name");
-
-        fieldLastName.addActionListener(new java.awt.event.ActionListener() {
+        fieldLocalCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldLastNameActionPerformed(evt);
+                fieldLocalCityActionPerformed(evt);
             }
         });
 
-        lblAge.setText("Age");
+        lblLocalState.setText("State (CA)");
+
+        fieldLocalState.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldLocalStateActionPerformed(evt);
+            }
+        });
+
+        fieldLocalZipCode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldLocalZipCodeActionPerformed(evt);
+            }
+        });
+
+        lblLocalZipCode.setText("Zip Code");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(96, 96, 96)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblLastName)
-                    .addComponent(lblFirstName)
-                    .addComponent(lblAge)
-                    .addComponent(lblMaritalStatus)
-                    .addComponent(lblMaritalStatus1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(fieldPrice, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                    .addComponent(fieldAge, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                    .addComponent(fieldFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                    .addComponent(fieldLastName)
-                    .addComponent(fieldPrice1, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
-                        .addComponent(lblTitle))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(223, 223, 223)
-                        .addComponent(btnSave)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblLocalAddressLine2)
+                            .addComponent(lblLocalAddressLine1)
+                            .addComponent(lblLocalCity)
+                            .addComponent(lblLocalState)
+                            .addComponent(lblLocalZipCode))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(fieldLocalState)
+                            .addComponent(fieldLocalCity)
+                            .addComponent(fieldLocalAddressLine1)
+                            .addComponent(fieldLocalAddressLine2)
+                            .addComponent(fieldLocalZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(137, 137, 137)
+                            .addComponent(lblTitle))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(223, 223, 223)
+                            .addComponent(btnSave))))
                 .addContainerGap(152, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -131,90 +130,113 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(91, 91, 91)
                 .addComponent(lblTitle)
-                .addGap(18, 18, 18)
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblFirstName)
-                    .addComponent(fieldFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblLocalAddressLine1)
+                    .addComponent(fieldLocalAddressLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblLastName)
-                    .addComponent(fieldLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblLocalAddressLine2)
+                    .addComponent(fieldLocalAddressLine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAge)
-                    .addComponent(fieldAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblLocalCity)
+                    .addComponent(fieldLocalCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblMaritalStatus)
-                    .addComponent(fieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblLocalState)
+                    .addComponent(fieldLocalState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblMaritalStatus1)
-                    .addComponent(fieldPrice1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(72, 72, 72)
+                    .addComponent(lblLocalZipCode)
+                    .addComponent(fieldLocalZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(61, 61, 61)
                 .addComponent(btnSave)
                 .addContainerGap(96, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fieldAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAgeActionPerformed
+    private void fieldCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldCityActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldAgeActionPerformed
+    }//GEN-LAST:event_fieldCityActionPerformed
 
-    private void fieldPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPriceActionPerformed
+    private void fieldStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldStateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldPriceActionPerformed
+    }//GEN-LAST:event_fieldStateActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
 
         // Step 1: collect text from the field
-        String firstName = fieldFirstName.getText();
-        String lastName = fieldLastName.getText();
-        String age = fieldAge.getText();
-        String maritalStatus = fieldPrice.getText();
+        String streetName = fieldLocalAddressLine1.getText();
+        String unitNum = fieldLocalAddressLine2.getText();
+        String city = fieldLocalCity.getText();
+        String state = fieldLocalState.getText();
+        String zipCode = fieldLocalZipCode.getText();
 
-        // Step 2: put those infomation to person
-        person.setFirstName(firstName);
-        person.setLastName(lastName);
-        person.setAge(Integer.parseInt(age));
-        person.setMaritalStatus(maritalStatus.equalsIgnoreCase("yes"));
+        // Step 2: put those infomation to person local address
+        person.getLocalAddress().setStreetName(streetName);
+        person.getLocalAddress().setUnitNum(unitNum);
+        person.getLocalAddress().setCity(city);
+        person.getLocalAddress().setState(state);
+        person.getLocalAddress().setZipCode(zipCode);
 
         //Step 3: pop up message appears
         JOptionPane.showMessageDialog(this, "Sucessfully Saved!");
 
         //Step 4: clear all fields
-        fieldFirstName.setText("");
-        fieldLastName.setText("");
-        fieldAge.setText("");
-        fieldPrice.setText("");
+        fieldLocalAddressLine1.setText("");
+        fieldLocalAddressLine2.setText("");
+        fieldLocalCity.setText("");
+        fieldLocalState.setText("");
+        fieldLocalZipCode.setText("");
     }//GEN-LAST:event_btnSaveActionPerformed
 
-    private void fieldFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldFirstNameActionPerformed
+    private void fieldStreetNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldStreetNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldFirstNameActionPerformed
+    }//GEN-LAST:event_fieldStreetNameActionPerformed
 
-    private void fieldPrice1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPrice1ActionPerformed
+    private void fieldZipCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldZipCodeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldPrice1ActionPerformed
+    }//GEN-LAST:event_fieldZipCodeActionPerformed
 
-    private void fieldLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldLastNameActionPerformed
+    private void fieldUnitNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldUnitNumActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldLastNameActionPerformed
+    }//GEN-LAST:event_fieldUnitNumActionPerformed
+
+    private void fieldLocalStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldLocalStateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldLocalStateActionPerformed
+
+    private void fieldLocalZipCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldLocalZipCodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldLocalZipCodeActionPerformed
+
+    private void fieldLocalAddressLine1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldLocalAddressLine1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldLocalAddressLine1ActionPerformed
+
+    private void fieldLocalAddressLine2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldLocalAddressLine2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldLocalAddressLine2ActionPerformed
+
+    private void fieldLocalCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldLocalCityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldLocalCityActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
-    private javax.swing.JTextField fieldAge;
-    private javax.swing.JTextField fieldFirstName;
-    private javax.swing.JTextField fieldLastName;
-    private javax.swing.JTextField fieldPrice;
-    private javax.swing.JTextField fieldPrice1;
-    private javax.swing.JLabel lblAge;
-    private javax.swing.JLabel lblFirstName;
-    private javax.swing.JLabel lblLastName;
-    private javax.swing.JLabel lblMaritalStatus;
-    private javax.swing.JLabel lblMaritalStatus1;
+    private javax.swing.JTextField fieldLocalAddressLine1;
+    private javax.swing.JTextField fieldLocalAddressLine2;
+    private javax.swing.JTextField fieldLocalCity;
+    private javax.swing.JTextField fieldLocalState;
+    private javax.swing.JTextField fieldLocalZipCode;
+    private javax.swing.JLabel lblLocalAddressLine1;
+    private javax.swing.JLabel lblLocalAddressLine2;
+    private javax.swing.JLabel lblLocalCity;
+    private javax.swing.JLabel lblLocalState;
+    private javax.swing.JLabel lblLocalZipCode;
     private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
 }

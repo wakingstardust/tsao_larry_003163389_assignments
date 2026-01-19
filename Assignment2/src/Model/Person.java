@@ -13,8 +13,6 @@ public class Person {
     String lastName;
     int age;
     boolean maritalStatus;
-    String phoneNumber;
-    String email;
     HomeAddress homeAddress;
     LocalAddress localAddress;
     BankAccount bankAccount;
@@ -55,22 +53,6 @@ public class Person {
 
     public void setMaritalStatus(boolean maritalStatus) {
         this.maritalStatus = maritalStatus;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public HomeAddress getHomeAddress() {

@@ -21,25 +21,6 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="lblLastName" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblFirstName" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblAge" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblMaritalStatus" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblMaritalStatus1" alignment="1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="fieldPrice" alignment="0" pref="159" max="32767" attributes="0"/>
-                  <Component id="fieldAge" alignment="0" pref="159" max="32767" attributes="0"/>
-                  <Component id="fieldFirstName" alignment="0" pref="159" max="32767" attributes="0"/>
-                  <Component id="fieldLastName" alignment="0" max="32767" attributes="0"/>
-                  <Component id="fieldPrice1" alignment="0" pref="159" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -50,8 +31,26 @@
                       <EmptySpace min="-2" pref="217" max="-2" attributes="0"/>
                       <Component id="btnSave" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="lblBankAccountType" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblBankNickname" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblAccountNumber" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblBankRoutingNumber" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblBankName" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="fieldBankRoutingNumber" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fieldBankAccountNumber" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fieldBankNickname" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fieldBankAccountType" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fieldBankName" alignment="0" min="-2" pref="159" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace pref="156" max="32767" attributes="0"/>
+              <EmptySpace pref="115" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -62,28 +61,28 @@
               <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblBankNickname" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldBankNickname" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblLastName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldLastName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblBankAccountType" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldBankAccountType" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblAge" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAccountNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldBankAccountNumber" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblMaritalStatus" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblBankRoutingNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldBankRoutingNumber" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblMaritalStatus1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldPrice1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblBankName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldBankName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
               <Component id="btnSave" min="-2" max="-2" attributes="0"/>
@@ -93,19 +92,62 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="fieldAge">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldAgeActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblMaritalStatus">
+    <Component class="javax.swing.JLabel" name="lblTitle">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Marital Status (Yes or No)"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Helvetica Neue" size="24" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Create Bank Account"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldPrice">
+    <Component class="javax.swing.JLabel" name="lblBankNickname">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bank Account Nickname"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldBankNickname">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldPriceActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldBankNicknameActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblBankAccountType">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bank Account Type (Checking or Saving)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldBankAccountType">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldBankAccountTypeActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblAccountNumber">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Account Number"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldBankAccountNumber">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldBankAccountNumberActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblBankRoutingNumber">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Routing Number"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldBankRoutingNumber">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldBankRoutingNumberActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblBankName">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bank Name"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldBankName">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldBankNameActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSave">
@@ -115,49 +157,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblTitle">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Helvetica Neue" size="24" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Create Bank Account"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblFirstName">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="First Name"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldFirstName">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldFirstNameActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldPrice1">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldPrice1ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblMaritalStatus1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Marital Status (Yes or No)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblLastName">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Last Name"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldLastName">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldLastNameActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblAge">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Age"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>

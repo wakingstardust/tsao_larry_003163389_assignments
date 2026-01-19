@@ -21,25 +21,6 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="lblLastName" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblFirstName" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblAge" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblMaritalStatus" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblMaritalStatus1" alignment="1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="fieldPrice" alignment="0" pref="159" max="32767" attributes="0"/>
-                  <Component id="fieldAge" alignment="0" pref="159" max="32767" attributes="0"/>
-                  <Component id="fieldFirstName" alignment="0" pref="159" max="32767" attributes="0"/>
-                  <Component id="fieldLastName" alignment="0" max="32767" attributes="0"/>
-                  <Component id="fieldPrice1" alignment="0" pref="159" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
@@ -49,6 +30,24 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="223" max="-2" attributes="0"/>
                       <Component id="btnSave" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="lblHomeAddressLine2" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblHomeAddressLine1" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblHomeCity" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblHomeState" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblHomeZipCode" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="fieldHomeState" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fieldHomeCity" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fieldHomeAddressLine1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fieldHomeAddressLine2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fieldHomeZipCode" alignment="0" min="-2" pref="159" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace pref="146" max="32767" attributes="0"/>
@@ -62,28 +61,28 @@
               <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblHomeAddressLine1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldHomeAddressLine1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblLastName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldLastName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblHomeAddressLine2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldHomeAddressLine2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblAge" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblHomeCity" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldHomeCity" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblMaritalStatus" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblHomeState" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldHomeState" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblMaritalStatus1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldPrice1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblHomeZipCode" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldHomeZipCode" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
               <Component id="btnSave" min="-2" max="-2" attributes="0"/>
@@ -101,44 +100,44 @@
         <Property name="text" type="java.lang.String" value="Create Home Address"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblFirstName">
+    <Component class="javax.swing.JLabel" name="lblHomeAddressLine1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="First Name"/>
+        <Property name="text" type="java.lang.String" value="Address Line 1"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldFirstName">
+    <Component class="javax.swing.JTextField" name="fieldHomeAddressLine1">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldFirstNameActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldHomeAddressLine1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblLastName">
+    <Component class="javax.swing.JLabel" name="lblHomeAddressLine2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Last Name"/>
+        <Property name="text" type="java.lang.String" value="Address Line 2"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldLastName">
+    <Component class="javax.swing.JTextField" name="fieldHomeAddressLine2">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldLastNameActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldHomeAddressLine2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblAge">
+    <Component class="javax.swing.JLabel" name="lblHomeCity">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Age"/>
+        <Property name="text" type="java.lang.String" value="City"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldAge">
+    <Component class="javax.swing.JTextField" name="fieldHomeCity">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldAgeActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldHomeCityActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblMaritalStatus">
+    <Component class="javax.swing.JLabel" name="lblHomeState">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Marital Status (Yes or No)"/>
+        <Property name="text" type="java.lang.String" value="State (CA)"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldPrice">
+    <Component class="javax.swing.JTextField" name="fieldHomeState">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldPriceActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldHomeStateActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSave">
@@ -149,14 +148,14 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldPrice1">
+    <Component class="javax.swing.JTextField" name="fieldHomeZipCode">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldPrice1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldHomeZipCodeActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblMaritalStatus1">
+    <Component class="javax.swing.JLabel" name="lblHomeZipCode">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Marital Status (Yes or No)"/>
+        <Property name="text" type="java.lang.String" value="Zip Code"/>
       </Properties>
     </Component>
   </SubComponents>

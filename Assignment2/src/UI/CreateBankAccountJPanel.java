@@ -31,32 +31,61 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        fieldAge = new javax.swing.JTextField();
-        lblMaritalStatus = new javax.swing.JLabel();
-        fieldPrice = new javax.swing.JTextField();
-        btnSave = new javax.swing.JButton();
         lblTitle = new javax.swing.JLabel();
-        lblFirstName = new javax.swing.JLabel();
-        fieldFirstName = new javax.swing.JTextField();
-        fieldPrice1 = new javax.swing.JTextField();
-        lblMaritalStatus1 = new javax.swing.JLabel();
-        lblLastName = new javax.swing.JLabel();
-        fieldLastName = new javax.swing.JTextField();
-        lblAge = new javax.swing.JLabel();
+        lblBankNickname = new javax.swing.JLabel();
+        fieldBankNickname = new javax.swing.JTextField();
+        lblBankAccountType = new javax.swing.JLabel();
+        fieldBankAccountType = new javax.swing.JTextField();
+        lblAccountNumber = new javax.swing.JLabel();
+        fieldBankAccountNumber = new javax.swing.JTextField();
+        lblBankRoutingNumber = new javax.swing.JLabel();
+        fieldBankRoutingNumber = new javax.swing.JTextField();
+        lblBankName = new javax.swing.JLabel();
+        fieldBankName = new javax.swing.JTextField();
+        btnSave = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 255, 204));
 
-        fieldAge.addActionListener(new java.awt.event.ActionListener() {
+        lblTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblTitle.setText("Create Bank Account");
+
+        lblBankNickname.setText("Bank Account Nickname");
+
+        fieldBankNickname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldAgeActionPerformed(evt);
+                fieldBankNicknameActionPerformed(evt);
             }
         });
 
-        lblMaritalStatus.setText("Marital Status (Yes or No)");
+        lblBankAccountType.setText("Bank Account Type (Checking or Saving)");
 
-        fieldPrice.addActionListener(new java.awt.event.ActionListener() {
+        fieldBankAccountType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldPriceActionPerformed(evt);
+                fieldBankAccountTypeActionPerformed(evt);
+            }
+        });
+
+        lblAccountNumber.setText("Account Number");
+
+        fieldBankAccountNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldBankAccountNumberActionPerformed(evt);
+            }
+        });
+
+        lblBankRoutingNumber.setText("Routing Number");
+
+        fieldBankRoutingNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldBankRoutingNumberActionPerformed(evt);
+            }
+        });
+
+        lblBankName.setText("Bank Name");
+
+        fieldBankName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldBankNameActionPerformed(evt);
             }
         });
 
@@ -67,55 +96,10 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        lblTitle.setText("Create Bank Account");
-
-        lblFirstName.setText("First Name");
-
-        fieldFirstName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldFirstNameActionPerformed(evt);
-            }
-        });
-
-        fieldPrice1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldPrice1ActionPerformed(evt);
-            }
-        });
-
-        lblMaritalStatus1.setText("Marital Status (Yes or No)");
-
-        lblLastName.setText("Last Name");
-
-        fieldLastName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldLastNameActionPerformed(evt);
-            }
-        });
-
-        lblAge.setText("Age");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblLastName)
-                    .addComponent(lblFirstName)
-                    .addComponent(lblAge)
-                    .addComponent(lblMaritalStatus)
-                    .addComponent(lblMaritalStatus1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(fieldPrice, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                    .addComponent(fieldAge, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                    .addComponent(fieldFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                    .addComponent(fieldLastName)
-                    .addComponent(fieldPrice1, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -123,8 +107,23 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
                         .addComponent(lblTitle))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(217, 217, 217)
-                        .addComponent(btnSave)))
-                .addContainerGap(156, Short.MAX_VALUE))
+                        .addComponent(btnSave))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblBankAccountType)
+                            .addComponent(lblBankNickname)
+                            .addComponent(lblAccountNumber)
+                            .addComponent(lblBankRoutingNumber)
+                            .addComponent(lblBankName))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(fieldBankRoutingNumber)
+                            .addComponent(fieldBankAccountNumber)
+                            .addComponent(fieldBankNickname)
+                            .addComponent(fieldBankAccountType)
+                            .addComponent(fieldBankName, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,88 +132,91 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
                 .addComponent(lblTitle)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblFirstName)
-                    .addComponent(fieldFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblBankNickname)
+                    .addComponent(fieldBankNickname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblLastName)
-                    .addComponent(fieldLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblBankAccountType)
+                    .addComponent(fieldBankAccountType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAge)
-                    .addComponent(fieldAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblAccountNumber)
+                    .addComponent(fieldBankAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblMaritalStatus)
-                    .addComponent(fieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblBankRoutingNumber)
+                    .addComponent(fieldBankRoutingNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblMaritalStatus1)
-                    .addComponent(fieldPrice1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblBankName)
+                    .addComponent(fieldBankName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49)
                 .addComponent(btnSave)
                 .addContainerGap(119, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fieldAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAgeActionPerformed
+    private void fieldBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldBalanceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldAgeActionPerformed
+    }//GEN-LAST:event_fieldBalanceActionPerformed
 
-    private void fieldPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPriceActionPerformed
+    private void fieldAccountTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAccountTypeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldPriceActionPerformed
+    }//GEN-LAST:event_fieldAccountTypeActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
 
         // Step 1: collect text from the field
-        String firstName = fieldFirstName.getText();
-        String lastName = fieldLastName.getText();
-        String age = fieldAge.getText();
-        String maritalStatus = fieldPrice.getText();
+        String nickname = fieldBankNickname.getText();
+        String accountNumber = fieldBankAccountNumber.getText();
+        String routingNumber = fieldBankRoutingNumber.getText();
+        String accountType = fieldBankAccountType.getText();
+        String bankName = fieldBankName.getText();
 
-        // Step 2: put those infomation to person
-        person.setFirstName(firstName);
-        person.setLastName(lastName);
-        person.setAge(Integer.parseInt(age));
-        person.setMaritalStatus(maritalStatus.equalsIgnoreCase("yes"));
+        // Step 2: put those infomation to person bank account
+        person.getBankAccount().setNickname(nickname);
+        person.getBankAccount().setAccountNumber(accountNumber);
+        person.getBankAccount().setRoutingNumber(routingNumber);
+        person.getBankAccount().setAccountType(accountType);
+        person.getBankAccount().setBankName(bankName);
 
         //Step 3: pop up message appears
         JOptionPane.showMessageDialog(this, "Sucessfully Saved!");
 
         //Step 4: clear all fields
-        fieldFirstName.setText("");
-        fieldLastName.setText("");
-        fieldAge.setText("");
-        fieldPrice.setText("");
+        fieldBankNickname.setText("");
+        fieldBankAccountNumber.setText("");
+        fieldBankRoutingNumber.setText("");
+        fieldBankAccountType.setText("");
+        fieldBankName.setText("");
     }//GEN-LAST:event_btnSaveActionPerformed
 
-    private void fieldFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldFirstNameActionPerformed
+    private void fieldAccountNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAccountNumberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldFirstNameActionPerformed
+    }//GEN-LAST:event_fieldAccountNumberActionPerformed
 
-    private void fieldPrice1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPrice1ActionPerformed
+    private void fieldBankNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldBankNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldPrice1ActionPerformed
+    }//GEN-LAST:event_fieldBankNameActionPerformed
 
-    private void fieldLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldLastNameActionPerformed
+    private void fieldRoutingNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldRoutingNumberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldLastNameActionPerformed
+    }//GEN-LAST:event_fieldRoutingNumberActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
-    private javax.swing.JTextField fieldAge;
-    private javax.swing.JTextField fieldFirstName;
-    private javax.swing.JTextField fieldLastName;
-    private javax.swing.JTextField fieldPrice;
-    private javax.swing.JTextField fieldPrice1;
-    private javax.swing.JLabel lblAge;
-    private javax.swing.JLabel lblFirstName;
-    private javax.swing.JLabel lblLastName;
-    private javax.swing.JLabel lblMaritalStatus;
-    private javax.swing.JLabel lblMaritalStatus1;
+    private javax.swing.JTextField fieldBankAccountNumber;
+    private javax.swing.JTextField fieldBankAccountType;
+    private javax.swing.JTextField fieldBankName;
+    private javax.swing.JTextField fieldBankNickname;
+    private javax.swing.JTextField fieldBankRoutingNumber;
+    private javax.swing.JLabel lblAccountNumber;
+    private javax.swing.JLabel lblBankAccountType;
+    private javax.swing.JLabel lblBankName;
+    private javax.swing.JLabel lblBankNickname;
+    private javax.swing.JLabel lblBankRoutingNumber;
     private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
 }
