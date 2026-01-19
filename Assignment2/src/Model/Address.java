@@ -8,14 +8,13 @@ package Model;
  *
  * @author wakingstardust
  */
-public class HomeAddress {
+public class Address {
     String streetName;
     String unitNum;
     String city;
-    String state;
     String zipCode;
     
-    public HomeAddress(){
+    public Address(){
         
     }
 
@@ -31,8 +30,8 @@ public class HomeAddress {
         return unitNum;
     }
 
-    public void setUnitNum(String unitNum) {
-        this.unitNum = unitNum;
+    public void setUnitNum(String unitNumber) {
+        this.unitNum = unitNumber;
     }
 
     public String getCity() {
@@ -43,14 +42,6 @@ public class HomeAddress {
         this.city = city;
     }
 
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
     public String getZipCode() {
         return zipCode;
     }
@@ -58,4 +49,7 @@ public class HomeAddress {
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
+    
+    
+    
 }
