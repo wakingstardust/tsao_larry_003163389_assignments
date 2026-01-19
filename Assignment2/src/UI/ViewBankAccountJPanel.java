@@ -50,293 +50,151 @@ public class ViewBankAccountJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblManuCity = new javax.swing.JLabel();
-        fieldManuCity = new javax.swing.JTextField();
-        lblManuZipCode = new javax.swing.JLabel();
-        fieldManuZipCode = new javax.swing.JTextField();
-        lblShippingAddress = new javax.swing.JLabel();
-        fieldShippingStreet = new javax.swing.JTextField();
-        lblShippingStreet = new javax.swing.JLabel();
-        fieldShippingUnit = new javax.swing.JTextField();
+        lblBankName = new javax.swing.JLabel();
+        fieldBankName = new javax.swing.JTextField();
         lblTitle = new javax.swing.JLabel();
-        lblShippingUnit = new javax.swing.JLabel();
-        lblName = new javax.swing.JLabel();
-        lblShippingCity = new javax.swing.JLabel();
-        fieldName = new javax.swing.JTextField();
-        fieldShippingCity = new javax.swing.JTextField();
-        lblDescription = new javax.swing.JLabel();
-        lblShippingZipCode = new javax.swing.JLabel();
-        fieldDescription = new javax.swing.JTextField();
-        fieldShippingZipCode = new javax.swing.JTextField();
-        lblAvailability = new javax.swing.JLabel();
-        fieldAvailability = new javax.swing.JTextField();
-        lblPrice = new javax.swing.JLabel();
-        fieldPrice = new javax.swing.JTextField();
-        lblManuAddress = new javax.swing.JLabel();
-        fieldManuStreet = new javax.swing.JTextField();
-        lblManuStreet = new javax.swing.JLabel();
-        fieldManuUnit = new javax.swing.JTextField();
-        lblManuUnit = new javax.swing.JLabel();
+        lblBankNickname = new javax.swing.JLabel();
+        fieldBankNickname = new javax.swing.JTextField();
+        lblBankAccountType = new javax.swing.JLabel();
+        fieldBankAccountType = new javax.swing.JTextField();
+        lblAccountNumber = new javax.swing.JLabel();
+        fieldBankAccountNumber = new javax.swing.JTextField();
+        lblBankRoutingNumber = new javax.swing.JLabel();
+        fieldBankRoutingNumber = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(204, 255, 204));
 
-        lblManuCity.setText("City");
+        lblBankName.setText("Bank Name");
 
-        lblManuZipCode.setText("Zip Code");
-
-        fieldManuZipCode.addActionListener(new java.awt.event.ActionListener() {
+        fieldBankName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldManuZipCodeActionPerformed(evt);
+                fieldBankNameActionPerformed(evt);
             }
         });
 
-        lblShippingAddress.setText("Shipping Address");
+        lblTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblTitle.setText("View Bank Account");
 
-        lblShippingStreet.setText("Street Name");
+        lblBankNickname.setText("Bank Account Nickname");
 
-        lblTitle.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        lblTitle.setText("View a Product");
-
-        lblShippingUnit.setText("Unit Number");
-
-        lblName.setText("Name");
-
-        lblShippingCity.setText("City");
-
-        fieldName.addActionListener(new java.awt.event.ActionListener() {
+        fieldBankNickname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldNameActionPerformed(evt);
+                fieldBankNicknameActionPerformed(evt);
             }
         });
 
-        lblDescription.setText("Description");
+        lblBankAccountType.setText("Bank Account Type (Checking or Saving)");
 
-        lblShippingZipCode.setText("Zip Code");
-
-        fieldDescription.addActionListener(new java.awt.event.ActionListener() {
+        fieldBankAccountType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldDescriptionActionPerformed(evt);
+                fieldBankAccountTypeActionPerformed(evt);
             }
         });
 
-        fieldShippingZipCode.addActionListener(new java.awt.event.ActionListener() {
+        lblAccountNumber.setText("Account Number");
+
+        fieldBankAccountNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldShippingZipCodeActionPerformed(evt);
+                fieldBankAccountNumberActionPerformed(evt);
             }
         });
 
-        lblAvailability.setText("Availability");
+        lblBankRoutingNumber.setText("Routing Number");
 
-        fieldAvailability.addActionListener(new java.awt.event.ActionListener() {
+        fieldBankRoutingNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldAvailabilityActionPerformed(evt);
+                fieldBankRoutingNumberActionPerformed(evt);
             }
         });
-
-        lblPrice.setText("Price");
-
-        fieldPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldPriceActionPerformed(evt);
-            }
-        });
-
-        lblManuAddress.setText("Manufacture Address");
-
-        lblManuStreet.setText("Street Name");
-
-        lblManuUnit.setText("Unit Number");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(183, Short.MAX_VALUE)
-                .addComponent(lblTitle)
-                .addGap(149, 149, 149))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(82, 82, 82)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lblAvailability)
-                                .addComponent(lblPrice)
-                                .addComponent(lblDescription)
-                                .addComponent(lblName))
-                            .addGap(6, 6, 6)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(fieldName, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(fieldDescription, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                                    .addComponent(fieldAvailability)
-                                    .addComponent(fieldPrice))))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblManuUnit, javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(19, 19, 19)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(lblManuZipCode)
-                                                .addComponent(lblManuCity))))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(fieldManuCity, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                                        .addComponent(fieldManuZipCode)
-                                        .addComponent(fieldManuUnit)))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblManuStreet)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblManuAddress)
-                                        .addComponent(fieldManuStreet, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(63, 63, 63)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(lblShippingCity)
-                                                .addComponent(lblShippingZipCode)))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(lblShippingUnit)))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(fieldShippingUnit)
-                                        .addComponent(fieldShippingCity, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                                        .addComponent(fieldShippingZipCode)))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(44, 44, 44)
-                                    .addComponent(lblShippingStreet)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblShippingAddress)
-                                        .addComponent(fieldShippingStreet, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblBankAccountType)
+                            .addComponent(lblBankNickname)
+                            .addComponent(lblAccountNumber)
+                            .addComponent(lblBankRoutingNumber)
+                            .addComponent(lblBankName))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(fieldBankRoutingNumber)
+                            .addComponent(fieldBankAccountNumber)
+                            .addComponent(fieldBankNickname)
+                            .addComponent(fieldBankAccountType)
+                            .addComponent(fieldBankName, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(143, 143, 143)
+                        .addComponent(lblTitle)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(118, 118, 118)
                 .addComponent(lblTitle)
-                .addContainerGap(407, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(125, 125, 125)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(fieldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblName))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblDescription)
-                        .addComponent(fieldDescription, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(fieldAvailability, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblAvailability))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblPrice)
-                        .addComponent(fieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(26, 26, 26)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblManuAddress)
-                        .addComponent(lblShippingAddress))
-                    .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblManuStreet)
-                                .addComponent(fieldManuStreet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(fieldManuUnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblManuUnit))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblManuCity)
-                                .addComponent(fieldManuCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(fieldManuZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblManuZipCode)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblShippingStreet)
-                                .addComponent(fieldShippingStreet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(fieldShippingUnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblShippingUnit))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblShippingCity)
-                                .addComponent(fieldShippingCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(fieldShippingZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblShippingZipCode))))
-                    .addContainerGap(74, Short.MAX_VALUE)))
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblBankNickname)
+                    .addComponent(fieldBankNickname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblBankAccountType)
+                    .addComponent(fieldBankAccountType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAccountNumber)
+                    .addComponent(fieldBankAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblBankRoutingNumber)
+                    .addComponent(fieldBankRoutingNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblBankName)
+                    .addComponent(fieldBankName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fieldManuZipCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldManuZipCodeActionPerformed
+    private void fieldBankNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldBankNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldManuZipCodeActionPerformed
+    }//GEN-LAST:event_fieldBankNameActionPerformed
 
-    private void fieldNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldNameActionPerformed
+    private void fieldBankNicknameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldBankNicknameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldNameActionPerformed
+    }//GEN-LAST:event_fieldBankNicknameActionPerformed
 
-    private void fieldDescriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldDescriptionActionPerformed
+    private void fieldBankAccountTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldBankAccountTypeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldDescriptionActionPerformed
+    }//GEN-LAST:event_fieldBankAccountTypeActionPerformed
 
-    private void fieldShippingZipCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldShippingZipCodeActionPerformed
+    private void fieldBankAccountNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldBankAccountNumberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldShippingZipCodeActionPerformed
+    }//GEN-LAST:event_fieldBankAccountNumberActionPerformed
 
-    private void fieldAvailabilityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAvailabilityActionPerformed
+    private void fieldBankRoutingNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldBankRoutingNumberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldAvailabilityActionPerformed
-
-    private void fieldPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPriceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fieldPriceActionPerformed
+    }//GEN-LAST:event_fieldBankRoutingNumberActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField fieldAvailability;
-    private javax.swing.JTextField fieldDescription;
-    private javax.swing.JTextField fieldManuCity;
-    private javax.swing.JTextField fieldManuStreet;
-    private javax.swing.JTextField fieldManuUnit;
-    private javax.swing.JTextField fieldManuZipCode;
-    private javax.swing.JTextField fieldName;
-    private javax.swing.JTextField fieldPrice;
-    private javax.swing.JTextField fieldShippingCity;
-    private javax.swing.JTextField fieldShippingStreet;
-    private javax.swing.JTextField fieldShippingUnit;
-    private javax.swing.JTextField fieldShippingZipCode;
-    private javax.swing.JLabel lblAvailability;
-    private javax.swing.JLabel lblDescription;
-    private javax.swing.JLabel lblManuAddress;
-    private javax.swing.JLabel lblManuCity;
-    private javax.swing.JLabel lblManuStreet;
-    private javax.swing.JLabel lblManuUnit;
-    private javax.swing.JLabel lblManuZipCode;
-    private javax.swing.JLabel lblName;
-    private javax.swing.JLabel lblPrice;
-    private javax.swing.JLabel lblShippingAddress;
-    private javax.swing.JLabel lblShippingCity;
-    private javax.swing.JLabel lblShippingStreet;
-    private javax.swing.JLabel lblShippingUnit;
-    private javax.swing.JLabel lblShippingZipCode;
+    private javax.swing.JTextField fieldBankAccountNumber;
+    private javax.swing.JTextField fieldBankAccountType;
+    private javax.swing.JTextField fieldBankName;
+    private javax.swing.JTextField fieldBankNickname;
+    private javax.swing.JTextField fieldBankRoutingNumber;
+    private javax.swing.JLabel lblAccountNumber;
+    private javax.swing.JLabel lblBankAccountType;
+    private javax.swing.JLabel lblBankName;
+    private javax.swing.JLabel lblBankNickname;
+    private javax.swing.JLabel lblBankRoutingNumber;
     private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
 

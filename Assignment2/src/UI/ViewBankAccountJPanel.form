@@ -21,306 +21,129 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="183" max="32767" attributes="0"/>
-              <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
-          </Group>
-          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="lblAvailability" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblPrice" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblDescription" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblName" alignment="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="fieldName" alignment="0" min="-2" pref="159" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="fieldDescription" alignment="0" pref="159" max="32767" attributes="0"/>
-                                  <Component id="fieldAvailability" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="fieldPrice" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="lblBankAccountType" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblBankNickname" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblAccountNumber" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblBankRoutingNumber" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblBankName" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblManuUnit" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="lblManuZipCode" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblManuCity" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="fieldManuCity" alignment="0" pref="118" max="32767" attributes="0"/>
-                                      <Component id="fieldManuZipCode" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="fieldManuUnit" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="lblManuStreet" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblManuAddress" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="fieldManuStreet" alignment="0" min="-2" pref="119" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="lblShippingCity" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblShippingZipCode" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lblShippingUnit" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="fieldShippingUnit" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="fieldShippingCity" alignment="0" pref="118" max="32767" attributes="0"/>
-                                      <Component id="fieldShippingZipCode" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                  <Component id="lblShippingStreet" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblShippingAddress" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="fieldShippingStreet" alignment="0" min="-2" pref="119" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="fieldBankRoutingNumber" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fieldBankAccountNumber" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fieldBankNickname" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fieldBankAccountType" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fieldBankName" alignment="0" min="-2" pref="159" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="35" max="-2" attributes="0"/>
+                  </Group>
               </Group>
+              <EmptySpace pref="110" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
               <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="407" max="32767" attributes="0"/>
-          </Group>
-          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="fieldName" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblDescription" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="fieldDescription" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="fieldAvailability" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblAvailability" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblPrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="fieldPrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblManuAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblShippingAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblManuStreet" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="fieldManuStreet" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="fieldManuUnit" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblManuUnit" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblManuCity" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="fieldManuCity" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="fieldManuZipCode" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblManuZipCode" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblShippingStreet" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="fieldShippingStreet" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="fieldShippingUnit" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblShippingUnit" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblShippingCity" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="fieldShippingCity" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="fieldShippingZipCode" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblShippingZipCode" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <EmptySpace pref="74" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblBankNickname" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldBankNickname" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblBankAccountType" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldBankAccountType" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblAccountNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldBankAccountNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblBankRoutingNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldBankRoutingNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblBankName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldBankName" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="156" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lblManuCity">
+    <Component class="javax.swing.JLabel" name="lblBankName">
       <Properties>
-        <Property name="text" type="java.lang.String" value="City"/>
+        <Property name="text" type="java.lang.String" value="Bank Name"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldManuCity">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblManuZipCode">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Zip Code"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldManuZipCode">
+    <Component class="javax.swing.JTextField" name="fieldBankName">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldManuZipCodeActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldBankNameActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblShippingAddress">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Shipping Address"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldShippingStreet">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblShippingStreet">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Street Name"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldShippingUnit">
     </Component>
     <Component class="javax.swing.JLabel" name="lblTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Helvetica Neue" size="18" style="0"/>
+          <Font name="Helvetica Neue" size="24" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="View a Product"/>
+        <Property name="text" type="java.lang.String" value="View Bank Account"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblShippingUnit">
+    <Component class="javax.swing.JLabel" name="lblBankNickname">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Unit Number"/>
+        <Property name="text" type="java.lang.String" value="Bank Account Nickname"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblName">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Name"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblShippingCity">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="City"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldName">
+    <Component class="javax.swing.JTextField" name="fieldBankNickname">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldNameActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldBankNicknameActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldShippingCity">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblDescription">
+    <Component class="javax.swing.JLabel" name="lblBankAccountType">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Description"/>
+        <Property name="text" type="java.lang.String" value="Bank Account Type (Checking or Saving)"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblShippingZipCode">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Zip Code"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldDescription">
+    <Component class="javax.swing.JTextField" name="fieldBankAccountType">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldDescriptionActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldBankAccountTypeActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldShippingZipCode">
+    <Component class="javax.swing.JLabel" name="lblAccountNumber">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Account Number"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldBankAccountNumber">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldShippingZipCodeActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldBankAccountNumberActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblAvailability">
+    <Component class="javax.swing.JLabel" name="lblBankRoutingNumber">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Availability"/>
+        <Property name="text" type="java.lang.String" value="Routing Number"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldAvailability">
+    <Component class="javax.swing.JTextField" name="fieldBankRoutingNumber">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldAvailabilityActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldBankRoutingNumberActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblPrice">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Price"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldPrice">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldPriceActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblManuAddress">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Manufacture Address"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldManuStreet">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblManuStreet">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Street Name"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldManuUnit">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblManuUnit">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Unit Number"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>
