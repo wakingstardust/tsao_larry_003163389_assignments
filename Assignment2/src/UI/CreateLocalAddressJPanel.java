@@ -4,7 +4,7 @@
  */
 package UI;
 
-import Model.Product;
+import Model.Person;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,10 +16,10 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreateJPanel
      */
-    Product product; 
-    public CreateLocalAddressJPanel(Product p) {
+    Person person; 
+    public CreateLocalAddressJPanel(Person p) {
         initComponents();
-        product = p;
+        person = p;
     }
 
     /**

@@ -4,7 +4,7 @@
  */
 package UI;
 
-import Model.Product;
+import Model.Person;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,10 +16,10 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreateJPanel
      */
-    Product product; 
-    public CreateBankAccountJPanel(Product p) {
+    Person person; 
+    public CreateBankAccountJPanel(Person p) {
         initComponents();
-        product = p;
+        person = p;
     }
 
     /**

@@ -4,7 +4,7 @@
  */
 package UI;
 
-import Model.Product;
+import Model.Person;
 
 /**
  *
@@ -15,10 +15,10 @@ public class ViewHomeAddressJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ViewJPanel
      */
-    Product product;
-    public ViewHomeAddressJPanel(Product p) {
+    Person person;
+    public ViewHomeAddressJPanel(Person p) {
         initComponents();
-        product = p;
+        person = p;
         display();
 
     }

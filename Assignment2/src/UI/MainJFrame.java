@@ -4,7 +4,7 @@
  */
 package UI;
 
-import Model.Product;
+import Model.Person;
 
 /**
  *
@@ -15,10 +15,10 @@ public class MainJFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainJFrame
      */
-    Product product;
+    Person person;
     public MainJFrame() {
         initComponents();
-        product = new Product();
+        person = new Person();
     }
 
     /**
@@ -174,41 +174,66 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnCreatePersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatePersonActionPerformed
         // TODO add your handling code here:
-        //Step 1: Instantitate the CreateJPanel
-        CreateJPanel createJPanel = new CreateJPanel(product);
+        //Step 1: Instantitate the CreatePersonJPanel1
+        CreatePersonJPanel createPersonJPanel = new CreatePersonJPanel(person);
         //Step 2: Switch
-        splitPane.setRightComponent(createJPanel);
+        splitPane.setRightComponent(createPersonJPanel);
     }//GEN-LAST:event_btnCreatePersonActionPerformed
 
     private void btnViewPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPersonActionPerformed
         // TODO add your handling code here:
-        //step 1 instangate the viewjpanel
-        ViewJPanel viewJPanel = new ViewJPanel(product);
-        splitPane.setRightComponent(viewJPanel);
+        //Step 1: Instantitate the ViewPersonJPanel
+        ViewPersonJPanel viewPersonJPanel = new ViewPersonJPanel(person);
+        //Step 2: Switch
+        splitPane.setRightComponent(viewPersonJPanel);
     }//GEN-LAST:event_btnViewPersonActionPerformed
 
     private void btnViewHomeAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHomeAddressActionPerformed
         // TODO add your handling code here:
+        //Step 1: Instantitate the ViewHomeAddressJPanel
+        ViewHomeAddressJPanel viewHomeAddressJPanel = new ViewHomeAddressJPanel(person);
+        //Step 2: Switch
+        splitPane.setRightComponent(viewHomeAddressJPanel);
     }//GEN-LAST:event_btnViewHomeAddressActionPerformed
 
     private void btnCreateHomeAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateHomeAddressActionPerformed
         // TODO add your handling code here:
+        //Step 1: Instantitate the CreateHomeAddressJPanel
+        CreateHomeAddressJPanel createHomeAddressJPanel = new CreateHomeAddressJPanel(person);
+        //Step 2: Switch
+        splitPane.setRightComponent(createHomeAddressJPanel);
     }//GEN-LAST:event_btnCreateHomeAddressActionPerformed
 
     private void btnViewPerson2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPerson2ActionPerformed
         // TODO add your handling code here:
+        //Step 1: Instantitate the ViewBankAccountJPanel
+        ViewBankAccountJPanel viewBankAccountJPanel = new ViewBankAccountJPanel(person);
+        //Step 2: Switch
+        splitPane.setRightComponent(viewBankAccountJPanel);
     }//GEN-LAST:event_btnViewPerson2ActionPerformed
 
     private void btnCreateBankAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateBankAccountActionPerformed
         // TODO add your handling code here:
+        //Step 1: Instantitate the CreateBankAccountJPanel
+        CreateBankAccountJPanel createBankAccountJPanel = new CreateBankAccountJPanel(person);
+        //Step 2: Switch
+        splitPane.setRightComponent(createBankAccountJPanel);
     }//GEN-LAST:event_btnCreateBankAccountActionPerformed
 
     private void btnViewLocalAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewLocalAddressActionPerformed
         // TODO add your handling code here:
+        //Step 1: Instantitate the ViewLocalAddressJPanel
+        ViewLocalAddressJPanel viewLocalAddressJPanel = new ViewLocalAddressJPanel(person);
+        //Step 2: Switch
+        splitPane.setRightComponent(viewLocalAddressJPanel);
     }//GEN-LAST:event_btnViewLocalAddressActionPerformed
 
     private void btnCreateLocalAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateLocalAddressActionPerformed
         // TODO add your handling code here:
+        //Step 1: Instantitate the CreateLocalAddressJPanel
+        CreateLocalAddressJPanel createLocalAddressJPanel = new CreateLocalAddressJPanel(person);
+        //Step 2: Switch
+        splitPane.setRightComponent(createLocalAddressJPanel);
     }//GEN-LAST:event_btnCreateLocalAddressActionPerformed
 
     /**
