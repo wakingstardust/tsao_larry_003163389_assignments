@@ -141,7 +141,7 @@ public class CreateServiceJPanel extends javax.swing.JPanel {
                     .addComponent(lblDuration))
                 .addGap(35, 35, 35)
                 .addComponent(btnCreate)
-                .addContainerGap(208, Short.MAX_VALUE))
+                .addContainerGap(258, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

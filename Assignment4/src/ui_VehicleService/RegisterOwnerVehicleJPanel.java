@@ -212,7 +212,7 @@ public class RegisterOwnerVehicleJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(274, 274, 274)
                         .addComponent(btnRegister)))
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(169, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,7 +244,7 @@ public class RegisterOwnerVehicleJPanel extends javax.swing.JPanel {
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(btnRegister)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
