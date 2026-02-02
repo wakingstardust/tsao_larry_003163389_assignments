@@ -13,6 +13,7 @@ public class Service {
     private String description;
     private double price;
     private int estimatedTime;
+    private String mechanicName;
     
     public String getServiceName() {
         return serviceName;
@@ -44,6 +45,14 @@ public class Service {
 
     public void setEstimatedTime(int estimatedTime) {
         this.estimatedTime = estimatedTime;
+    }
+    
+    public String getMechanicName() {
+        return mechanicName;
+    }
+
+    public void setMechanicName(String mechanicName) {
+        this.mechanicName = mechanicName;
     }
     
     @Override

@@ -6,7 +6,10 @@ package ui;
 
 import java.awt.CardLayout;
 import model.Business;
-import ui_AccountManager.AccountMngWorkAreaJPanel;
+import model.Owner;
+import model.Service;
+import model.Vehicle;
+
 
 /**
  *
@@ -37,18 +40,36 @@ public class MainJFrame extends javax.swing.JFrame {
 
         splitPane = new javax.swing.JSplitPane();
         topJPanel = new javax.swing.JPanel();
-        btnVehicleService = new javax.swing.JButton();
+        btnServices = new javax.swing.JButton();
+        btnVehicleOwner = new javax.swing.JButton();
+        btnManageVehicles = new javax.swing.JButton();
         userProcessContainer = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         splitPane.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        btnVehicleService.setBackground(new java.awt.Color(153, 204, 255));
-        btnVehicleService.setText("Open Vehicle Service Manager");
-        btnVehicleService.addActionListener(new java.awt.event.ActionListener() {
+        btnServices.setBackground(new java.awt.Color(153, 204, 255));
+        btnServices.setText("Services");
+        btnServices.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVehicleServiceActionPerformed(evt);
+                btnServicesActionPerformed(evt);
+            }
+        });
+
+        btnVehicleOwner.setBackground(new java.awt.Color(153, 204, 255));
+        btnVehicleOwner.setText("Vehicle & Owner");
+        btnVehicleOwner.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVehicleOwnerActionPerformed(evt);
+            }
+        });
+
+        btnManageVehicles.setBackground(new java.awt.Color(153, 204, 255));
+        btnManageVehicles.setText("Manage Vehicles");
+        btnManageVehicles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageVehiclesActionPerformed(evt);
             }
         });
 
@@ -58,14 +79,21 @@ public class MainJFrame extends javax.swing.JFrame {
             topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(topJPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnVehicleService)
-                .addContainerGap(485, Short.MAX_VALUE))
+                .addComponent(btnServices)
+                .addGap(18, 18, 18)
+                .addComponent(btnVehicleOwner)
+                .addGap(18, 18, 18)
+                .addComponent(btnManageVehicles)
+                .addContainerGap(323, Short.MAX_VALUE))
         );
         topJPanelLayout.setVerticalGroup(
             topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(topJPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnVehicleService)
+                .addGroup(topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnServices)
+                    .addComponent(btnVehicleOwner)
+                    .addComponent(btnManageVehicles))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -88,14 +116,24 @@ public class MainJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnVehicleServiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVehicleServiceActionPerformed
+    private void btnServicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnServicesActionPerformed
         // TODO add your handling code here:
-        AccountMngWorkAreaJPanel panel = new AccountMngWorkAreaJPanel(userProcessContainer, accountDirectory);
-        userProcessContainer.add("AccountMngWorkAreaJPanel", panel);
+        
+        CreateServiceJPanel panel = new CreateServiceJPanel(userProcessContainer, business);
+        userProcessContainer.add("CreateServiceJPanel", panel);
         
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnVehicleServiceActionPerformed
+        
+    }//GEN-LAST:event_btnServicesActionPerformed
+
+    private void btnVehicleOwnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVehicleOwnerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVehicleOwnerActionPerformed
+
+    private void btnManageVehiclesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageVehiclesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnManageVehiclesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,7 +171,9 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnVehicleService;
+    private javax.swing.JButton btnManageVehicles;
+    private javax.swing.JButton btnServices;
+    private javax.swing.JButton btnVehicleOwner;
     private javax.swing.JSplitPane splitPane;
     private javax.swing.JPanel topJPanel;
     private javax.swing.JPanel userProcessContainer;
@@ -141,17 +181,73 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void generateDemoData(){
         
-        Account newAccount = accountDirectory.addAccount();
-        newAccount.setAccountNumber("0123456789");
-        newAccount.setRoutingNumber("001122334455");
-        newAccount.setBankName("Bank of America");
-        newAccount.setBalance(200);
-        
-        Account anotherNewAccount = accountDirectory.addAccount();
-        anotherNewAccount.setAccountNumber("9876543210");
-        anotherNewAccount.setRoutingNumber("554433221100");
-        anotherNewAccount.setBankName("Santander Bank");
-        anotherNewAccount.setBalance(1200);
+        Service newService = business.getServiceCatalog().addService();
+        newService.setServiceName("Oil Change");
+        newService.setDescription("Regular oil change");
+        newService.setPrice(45.00);
+        newService.setEstimatedTime(30);
+
+        Service anotherService = business.getServiceCatalog().addService();
+        anotherService.setServiceName("Car Wash");
+        anotherService.setDescription("Full car wash");
+        anotherService.setPrice(25.00);
+        anotherService.setEstimatedTime(20);
+
+        Service thirdService = business.getServiceCatalog().addService();
+        thirdService.setServiceName("Puncture");
+        thirdService.setDescription("Tire puncture repair");
+        thirdService.setPrice(35.00);
+        thirdService.setEstimatedTime(45);
+
+        Owner owner1 = new Owner("John Smith", "123 Main St", "john@email.com", 5551234567L);
+        Vehicle vehicle1 = business.getVehicleDirectory().addVehicle();
+        vehicle1.setMake("Toyota");
+        vehicle1.setModel("Camry");
+        vehicle1.setYear(2020);
+        vehicle1.setVin("VIN001");
+        vehicle1.setMileage(35000);
+        vehicle1.setOwner(owner1);
+        vehicle1.addService(newService);
+
+        Owner owner2 = new Owner("Jane Doe", "456 Oak Ave", "jane@email.com", 5559876543L);
+        Vehicle vehicle2 = business.getVehicleDirectory().addVehicle();
+        vehicle2.setMake("Toyota");
+        vehicle2.setModel("Corolla");
+        vehicle2.setYear(2021);
+        vehicle2.setVin("VIN002");
+        vehicle2.setMileage(22000);
+        vehicle2.setOwner(owner2);
+        vehicle2.addService(anotherService);
+
+        Owner owner3 = new Owner("Bob Wilson", "789 Pine Rd", "bob@email.com", 5554567890L);
+        Vehicle vehicle3 = business.getVehicleDirectory().addVehicle();
+        vehicle3.setMake("Honda");
+        vehicle3.setModel("Civic");
+        vehicle3.setYear(2019);
+        vehicle3.setVin("VIN003");
+        vehicle3.setMileage(48000);
+        vehicle3.setOwner(owner3);
+        vehicle3.addService(thirdService);
+
+        Owner owner4 = new Owner("Alice Brown", "321 Elm St", "alice@email.com", 5551112222L);
+        Vehicle vehicle4 = business.getVehicleDirectory().addVehicle();
+        vehicle4.setMake("Ford");
+        vehicle4.setModel("Focus");
+        vehicle4.setYear(2022);
+        vehicle4.setVin("VIN004");
+        vehicle4.setMileage(15000);
+        vehicle4.setOwner(owner4);
+        vehicle4.addService(newService);
+
+        Owner owner5 = new Owner("Charlie Davis", "654 Maple Dr", "charlie@email.com", 5553334444L);
+        Vehicle vehicle5 = business.getVehicleDirectory().addVehicle();
+        vehicle5.setMake("Chevrolet");
+        vehicle5.setModel("Malibu");
+        vehicle5.setYear(2018);
+        vehicle5.setVin("VIN005");
+        vehicle5.setMileage(62000);
+        vehicle5.setOwner(owner5);
+        vehicle5.addService(anotherService);
         
     }
 
