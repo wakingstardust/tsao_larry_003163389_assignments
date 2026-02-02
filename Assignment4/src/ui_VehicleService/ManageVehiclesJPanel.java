@@ -163,8 +163,15 @@ public class ManageVehiclesJPanel extends javax.swing.JPanel {
                 Object[] row = new Object[4];
                 row[0] = v.getOwner().getName();
                 row[1] = v.getVin();
-                row[2] = v.getServices().isEmpty() ? "None" : v.getServices().get(0).getServiceName();
-                row[3] = v.getServices().isEmpty() ? 0.0 : v.getServices().get(0).getPrice();
+                
+                if (v.getServices().isEmpty()) {
+                    row[2] = "None";
+                    row[3] = 0.0;
+                } else {
+                    row[2] = v.getServices().get(0).getServiceName();
+                    row[3] = v.getServices().get(0).getPrice();
+                }
+                
                 model.addRow(row);
                 found = true;
             }
@@ -249,8 +256,15 @@ public class ManageVehiclesJPanel extends javax.swing.JPanel {
             Object[] row = new Object[4];
             row[0] = v.getOwner().getName();
             row[1] = v.getVin();
-            row[2] = v.getServices().isEmpty() ? "None" : v.getServices().get(0).getServiceName();
-            row[3] = v.getServices().isEmpty() ? 0.0 : v.getServices().get(0).getPrice();
+            
+            if (v.getServices().isEmpty()) {
+                row[2] = "None";
+                row[3] = 0.0;
+            } else {
+                row[2] = v.getServices().get(0).getServiceName();
+                row[3] = v.getServices().get(0).getPrice();
+            }
+            
             model.addRow(row);
         }
     }

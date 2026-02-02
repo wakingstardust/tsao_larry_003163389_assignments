@@ -304,21 +304,33 @@ public class ViewVehicleJPanel extends javax.swing.JPanel {
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         
+        String ownerFirstName = txtOwnerFirstName.getText();
+        String ownerLastName = txtOwnerLastName.getText();
         String make = txtMake.getText();
         String model = txtModel.getText();
         String registration = txtRegistration.getText();
         
-        if (make.isBlank() || model.isBlank() || registration.isBlank()) {
+        if (ownerFirstName.isBlank() || ownerLastName.isBlank() || make.isBlank() || model.isBlank() || registration.isBlank()) {
             JOptionPane.showMessageDialog(this, "All fields are mandatory.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
         
+        String ownerName = ownerFirstName + " " + ownerLastName;
+        vehicle.getOwner().setName(ownerName);
         vehicle.setMake(make);
         vehicle.setModel(model);
         
-        JOptionPane.showMessageDialog(this, "Vehicle updated successfully.", "Success", JOptionPane.INFORMATION_MESSAGE);
-        setViewMode();
+        String selectedServiceName = (String) cmbService.getSelectedItem();
+        Service selectedService = business.getServiceCatalog().searchService(selectedServiceName);
+        if (!vehicle.getServices().isEmpty()) {
+            vehicle.getServices().set(0, selectedService);
+        } else {
+            vehicle.addService(selectedService);
+        }
         
+        JOptionPane.showMessageDialog(this, "Vehicle updated successfully.", "Success", JOptionPane.INFORMATION_MESSAGE);
+        
+        setViewMode();
         
     }//GEN-LAST:event_btnSaveActionPerformed
 
@@ -352,13 +364,26 @@ public class ViewVehicleJPanel extends javax.swing.JPanel {
 
     private void populateFields() {
         txtOwnerId.setText(vehicle.getVin());
-        txtOwnerFirstName.setText(vehicle.getOwner().getName());
-        txtOwnerLastName.setText("");
-        txtServiceDate.setText("");
+        
+        String ownerName = vehicle.getOwner().getName();
+        String[] nameParts = ownerName.split(" ");
+        if (nameParts.length >= 2) {
+            txtOwnerFirstName.setText(nameParts[0]);
+            txtOwnerLastName.setText(nameParts[1]);
+        } else {
+            txtOwnerFirstName.setText(ownerName);
+            txtOwnerLastName.setText("");
+        }
+        
+        txtServiceDate.setText("2024-01-01");
         txtVehicleId.setText(vehicle.getVin());
         txtMake.setText(vehicle.getMake());
         txtModel.setText(vehicle.getModel());
         txtRegistration.setText(vehicle.getVin());
+        
+        if (!vehicle.getServices().isEmpty()) {
+            cmbService.setSelectedItem(vehicle.getServices().get(0).getServiceName());
+        }
     }
     
     private void populateServiceComboBox() {

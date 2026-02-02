@@ -226,6 +226,8 @@ public class MainJFrame extends javax.swing.JFrame {
         vehicle1.setMileage(35000);
         vehicle1.setOwner(owner1);
         vehicle1.addService(newService);
+        vehicle1.setIsServiced(true);
+
 
         Owner owner2 = new Owner("Jane Doe", "456 Oak Ave", "jane@email.com", 5559876543L);
         Vehicle vehicle2 = business.getVehicleDirectory().addVehicle();
@@ -236,6 +238,7 @@ public class MainJFrame extends javax.swing.JFrame {
         vehicle2.setMileage(22000);
         vehicle2.setOwner(owner2);
         vehicle2.addService(anotherService);
+        vehicle2.setIsServiced(false);
 
         Owner owner3 = new Owner("Bob Wilson", "789 Pine Rd", "bob@email.com", 5554567890L);
         Vehicle vehicle3 = business.getVehicleDirectory().addVehicle();
@@ -246,6 +249,8 @@ public class MainJFrame extends javax.swing.JFrame {
         vehicle3.setMileage(48000);
         vehicle3.setOwner(owner3);
         vehicle3.addService(thirdService);
+        vehicle3.setIsServiced(true);
+
 
         Owner owner4 = new Owner("Alice Brown", "321 Elm St", "alice@email.com", 5551112222L);
         Vehicle vehicle4 = business.getVehicleDirectory().addVehicle();
@@ -256,6 +261,8 @@ public class MainJFrame extends javax.swing.JFrame {
         vehicle4.setMileage(15000);
         vehicle4.setOwner(owner4);
         vehicle4.addService(newService);
+        vehicle4.setIsServiced(false);
+
 
         Owner owner5 = new Owner("Charlie Davis", "654 Maple Dr", "charlie@email.com", 5553334444L);
         Vehicle vehicle5 = business.getVehicleDirectory().addVehicle();
@@ -266,6 +273,8 @@ public class MainJFrame extends javax.swing.JFrame {
         vehicle5.setMileage(62000);
         vehicle5.setOwner(owner5);
         vehicle5.addService(anotherService);
+        vehicle5.setIsServiced(true);
+
         
     }
 

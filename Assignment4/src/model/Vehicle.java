@@ -14,6 +14,7 @@ public class Vehicle {
     private String make;
     private String model;
     private int year;
+    private boolean isServiced;
     private String vin;
     private int mileage;
     private Owner owner;
@@ -77,6 +78,14 @@ public class Vehicle {
 
     public void addService(Service service) {
         services.add(service);
+    }
+    
+    public boolean getIsServiced() {
+        return isServiced;
+    }
+
+    public void setIsServiced(boolean isServiced) {
+        this.isServiced = isServiced;
     }
     
     @Override
