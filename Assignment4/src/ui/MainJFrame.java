@@ -9,6 +9,7 @@ import model.Business;
 import model.Owner;
 import model.Service;
 import model.Vehicle;
+import ui_VehicleService.RegisterOwnerVehicleJPanel;
 
 
 /**
@@ -129,6 +130,13 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnVehicleOwnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVehicleOwnerActionPerformed
         // TODO add your handling code here:
+        
+        RegisterOwnerVehicleJPanel panel = new RegisterOwnerVehicleJPanel(userProcessContainer, business);
+        userProcessContainer.add("RegisterOwnerVehicleJPanel", panel);
+        
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+        
     }//GEN-LAST:event_btnVehicleOwnerActionPerformed
 
     private void btnManageVehiclesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageVehiclesActionPerformed
