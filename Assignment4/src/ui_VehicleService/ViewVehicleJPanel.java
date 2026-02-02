@@ -32,10 +32,10 @@ public class ViewVehicleJPanel extends javax.swing.JPanel {
         this.userProcessContainer = container;
         this.business = business;
         this.vehicle = vehicle;
+                
+        populateServiceComboBox();
         
         populateFields();
-        
-        populateServiceComboBox();
 
         setViewMode();
         
