@@ -5,8 +5,7 @@
 package ui;
 
 import java.awt.CardLayout;
-import model.Account;
-import model.AccountDirectory;
+import model.Business;
 import ui_AccountManager.AccountMngWorkAreaJPanel;
 
 /**
@@ -15,7 +14,7 @@ import ui_AccountManager.AccountMngWorkAreaJPanel;
  */
 public class MainJFrame extends javax.swing.JFrame {
     
-    private AccountDirectory accountDirectory;
+    private Business business;
 
     /**
      * Creates new form MainJFrame
@@ -23,7 +22,7 @@ public class MainJFrame extends javax.swing.JFrame {
     public MainJFrame() {
         initComponents();
         
-        this.accountDirectory = new AccountDirectory();
+        this.business = new Business();
         generateDemoData();
     }
 
@@ -38,18 +37,18 @@ public class MainJFrame extends javax.swing.JFrame {
 
         splitPane = new javax.swing.JSplitPane();
         topJPanel = new javax.swing.JPanel();
-        btnAccountMng = new javax.swing.JButton();
+        btnVehicleService = new javax.swing.JButton();
         userProcessContainer = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         splitPane.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        btnAccountMng.setBackground(new java.awt.Color(153, 204, 255));
-        btnAccountMng.setText("Open Account Manager Work Area");
-        btnAccountMng.addActionListener(new java.awt.event.ActionListener() {
+        btnVehicleService.setBackground(new java.awt.Color(153, 204, 255));
+        btnVehicleService.setText("Open Vehicle Service Manager");
+        btnVehicleService.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAccountMngActionPerformed(evt);
+                btnVehicleServiceActionPerformed(evt);
             }
         });
 
@@ -59,14 +58,14 @@ public class MainJFrame extends javax.swing.JFrame {
             topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(topJPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnAccountMng)
-                .addContainerGap(463, Short.MAX_VALUE))
+                .addComponent(btnVehicleService)
+                .addContainerGap(485, Short.MAX_VALUE))
         );
         topJPanelLayout.setVerticalGroup(
             topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(topJPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnAccountMng)
+                .addComponent(btnVehicleService)
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -89,14 +88,14 @@ public class MainJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAccountMngActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccountMngActionPerformed
+    private void btnVehicleServiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVehicleServiceActionPerformed
         // TODO add your handling code here:
         AccountMngWorkAreaJPanel panel = new AccountMngWorkAreaJPanel(userProcessContainer, accountDirectory);
         userProcessContainer.add("AccountMngWorkAreaJPanel", panel);
         
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnAccountMngActionPerformed
+    }//GEN-LAST:event_btnVehicleServiceActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,7 +133,7 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAccountMng;
+    private javax.swing.JButton btnVehicleService;
     private javax.swing.JSplitPane splitPane;
     private javax.swing.JPanel topJPanel;
     private javax.swing.JPanel userProcessContainer;
