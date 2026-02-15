@@ -2,35 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package UserInterface;
-
-import Business.Business;
-import javax.swing.JPanel;
-import javax.swing.JOptionPane;
-import Business.Person.Person;
-import Business.Profiles.StudentProfile;
-import Business.UserAccounts.UserAccount;
+package UserInterface.WorkAreas.StudentRole;
 
 /**
  *
  * @author wakingstardust
  */
-public class SignUpJPanel extends javax.swing.JPanel {
-    
-    Business business;
-    JPanel CardSequencePanel;
+public class StudentMyProfileJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form NewJPanel
+     * Creates new form StudentMyProfileJPanel
      */
-    public SignUpJPanel(Business b, JPanel clp) {
-        
-        this.business = b;
-        this.CardSequencePanel = clp;
-        
+    public StudentMyProfileJPanel() {
         initComponents();
-        
-}
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -41,28 +26,16 @@ public class SignUpJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        txtPassword = new javax.swing.JPasswordField();
+        txtName = new javax.swing.JTextField();
+        txtNUID = new javax.swing.JTextField();
+        txtUsername = new javax.swing.JTextField();
+        btnBack = new javax.swing.JButton();
         lblTitle = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
         lblNuid = new javax.swing.JLabel();
         lblUsername = new javax.swing.JLabel();
         lblPassword = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
-        txtNUID = new javax.swing.JTextField();
-        txtUsername = new javax.swing.JTextField();
-        txtPassword = new javax.swing.JPasswordField();
-        btnCreateAccount = new javax.swing.JButton();
-        btnBack = new javax.swing.JButton();
-
-        lblTitle.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        lblTitle.setText("Sign Up - Create Student Account");
-
-        lblName.setText("Name");
-
-        lblNuid.setText("NUID");
-
-        lblUsername.setText("Username");
-
-        lblPassword.setText("Password");
 
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,19 +55,23 @@ public class SignUpJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnCreateAccount.setText("Create Account");
-        btnCreateAccount.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateAccountActionPerformed(evt);
-            }
-        });
-
-        btnBack.setText("Back to Login");
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+
+        lblTitle.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        lblTitle.setText("My Profile");
+
+        lblName.setText("Name");
+
+        lblNuid.setText("NUID");
+
+        lblUsername.setText("Username");
+
+        lblPassword.setText("Password");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -103,13 +80,8 @@ public class SignUpJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(257, 257, 257)
-                        .addComponent(btnCreateAccount)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnBack))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(242, 242, 242)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGap(170, 170, 170)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(lblPassword)
@@ -125,15 +97,20 @@ public class SignUpJPanel extends javax.swing.JPanel {
                                         .addComponent(txtName)
                                         .addComponent(txtNUID)
                                         .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(lblTitle))))
-                .addContainerGap(297, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(114, 114, 114)
+                                .addComponent(lblTitle))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(269, 269, 269)
+                        .addComponent(btnBack)))
+                .addContainerGap(235, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(54, 54, 54)
                 .addComponent(lblTitle)
-                .addGap(26, 26, 26)
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblName)
                     .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -149,11 +126,9 @@ public class SignUpJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPassword)
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCreateAccount)
-                    .addComponent(btnBack))
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnBack)
+                .addContainerGap(171, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -169,80 +144,18 @@ public class SignUpJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUsernameActionPerformed
 
-    private void btnCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAccountActionPerformed
-        // TODO add your handling code here:
-        
-        String name = txtName.getText();
-        String nuid = txtNUID.getText();
-        String username = txtUsername.getText();
-        String password = new String(txtPassword.getPassword());
-
-        if(name.isEmpty() || nuid.isEmpty() || username.isEmpty() || password.isEmpty()){
-            JOptionPane.showMessageDialog(this, 
-                "Please fill all fields", 
-                "Error", 
-                JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        if(password.length() < 4){
-            JOptionPane.showMessageDialog(this, 
-                "Password must be at least 4 characters", 
-                "Error", 
-                JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        UserAccount existingUser = business.getUserAccountDirectory().findUserAccount(username);
-        if(existingUser != null){
-            JOptionPane.showMessageDialog(this, 
-                "Username already exists", 
-                "Error", 
-                JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        Person existingPerson = business.getPersonDirectory().findPersonByNuid(nuid);
-        if(existingPerson != null){
-            JOptionPane.showMessageDialog(this, 
-                "NUID already registered", 
-                "Error", 
-                JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        Person newPerson = business.getPersonDirectory().newPerson(name);
-        newPerson.setNuid(nuid);
-
-        StudentProfile newStudent = business.getStudentDirectory().newStudentProfile(newPerson);
-
-        UserAccount newAccount = business.getUserAccountDirectory().newUserAccount(newStudent, username, password);
-
-        JOptionPane.showMessageDialog(this, 
-            "Account created successfully! Please login with your credentials.", 
-            "Success", 
-            JOptionPane.INFORMATION_MESSAGE);
-
-        txtName.setText("");
-        txtNUID.setText("");
-        txtUsername.setText("");
-        txtPassword.setText("");
-        
-    }//GEN-LAST:event_btnCreateAccountActionPerformed
-
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        
+
         CardSequencePanel.removeAll();
         CardSequencePanel.revalidate();
         CardSequencePanel.repaint();
-        
+
     }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnCreateAccount;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblNuid;
     private javax.swing.JLabel lblPassword;
