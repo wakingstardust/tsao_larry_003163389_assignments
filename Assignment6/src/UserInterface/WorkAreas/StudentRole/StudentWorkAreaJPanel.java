@@ -14,6 +14,9 @@ import Business.Business;
 import Business.Profiles.StudentProfile;
 import javax.swing.JPanel;
 
+import UserInterface.WorkAreas.StudentRole.StudentMyProfileJPanel;
+
+
 /**
  *
  * @author kal
@@ -176,8 +179,12 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-
-
+        
+        StudentMyProfileJPanel profilePanel = new StudentMyProfileJPanel(business, student, CardSequencePanel);
+        CardSequencePanel.removeAll();
+        CardSequencePanel.add("myprofile", profilePanel);
+        CardSequencePanel.revalidate();
+        CardSequencePanel.repaint();
 
 }//GEN-LAST:event_jButton9ActionPerformed
 

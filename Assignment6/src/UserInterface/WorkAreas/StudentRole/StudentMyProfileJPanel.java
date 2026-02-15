@@ -3,18 +3,46 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UserInterface.WorkAreas.StudentRole;
+import UserInterface.WorkAreas.StudentRole.StudentWorkAreaJPanel;
+
+import Business.Business;
+import Business.Profiles.StudentProfile;
+import javax.swing.JPanel;
 
 /**
  *
  * @author wakingstardust
  */
 public class StudentMyProfileJPanel extends javax.swing.JPanel {
+    
+    Business business;
+    StudentProfile studentProfile;
+    JPanel CardSequencePanel;
 
     /**
      * Creates new form StudentMyProfileJPanel
      */
-    public StudentMyProfileJPanel() {
+    public StudentMyProfileJPanel(Business b, StudentProfile sp, JPanel clp) {
         initComponents();
+        
+        this.business = b;
+        this.studentProfile = sp;
+        this.CardSequencePanel = clp;
+        display();
+        
+    }
+    
+    private void display() {
+        // Populate text fields with student data
+        txtName.setText(studentProfile.getPerson().getPersonId());
+        
+        String nuid = studentProfile.getPerson().getNuid();
+        if(nuid != null && !nuid.isEmpty()){
+            txtNUID.setText(nuid);
+        } else {
+            txtNUID.setText("Not set");
+        }
+        
     }
 
     /**
@@ -26,16 +54,12 @@ public class StudentMyProfileJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtPassword = new javax.swing.JPasswordField();
         txtName = new javax.swing.JTextField();
         txtNUID = new javax.swing.JTextField();
-        txtUsername = new javax.swing.JTextField();
         btnBack = new javax.swing.JButton();
         lblTitle = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
         lblNuid = new javax.swing.JLabel();
-        lblUsername = new javax.swing.JLabel();
-        lblPassword = new javax.swing.JLabel();
 
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -46,12 +70,6 @@ public class StudentMyProfileJPanel extends javax.swing.JPanel {
         txtNUID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNUIDActionPerformed(evt);
-            }
-        });
-
-        txtUsername.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsernameActionPerformed(evt);
             }
         });
 
@@ -69,10 +87,6 @@ public class StudentMyProfileJPanel extends javax.swing.JPanel {
 
         lblNuid.setText("NUID");
 
-        lblUsername.setText("Username");
-
-        lblPassword.setText("Password");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -80,28 +94,19 @@ public class StudentMyProfileJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblPassword)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(txtPassword))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(lblUsername)
-                                        .addComponent(lblNuid)
-                                        .addComponent(lblName))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtName)
-                                        .addComponent(txtNUID)
-                                        .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(114, 114, 114)
-                                .addComponent(lblTitle))))
+                        .addGap(195, 195, 195)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblNuid)
+                            .addComponent(lblName))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtName, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
+                            .addComponent(txtNUID)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(269, 269, 269)
+                        .addGap(284, 284, 284)
+                        .addComponent(lblTitle))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(286, 286, 286)
                         .addComponent(btnBack)))
                 .addContainerGap(235, Short.MAX_VALUE))
         );
@@ -118,17 +123,9 @@ public class StudentMyProfileJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNuid)
                     .addComponent(txtNUID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUsername)
-                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPassword)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(btnBack)
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(241, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -140,14 +137,13 @@ public class StudentMyProfileJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNUIDActionPerformed
 
-    private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsernameActionPerformed
-
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-
+        
+        StudentWorkAreaJPanel workArea = new StudentWorkAreaJPanel(business, studentProfile, CardSequencePanel);
+        
         CardSequencePanel.removeAll();
+        CardSequencePanel.add("student", workArea);
         CardSequencePanel.revalidate();
         CardSequencePanel.repaint();
 
@@ -158,12 +154,8 @@ public class StudentMyProfileJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblNuid;
-    private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblTitle;
-    private javax.swing.JLabel lblUsername;
     private javax.swing.JTextField txtNUID;
     private javax.swing.JTextField txtName;
-    private javax.swing.JPasswordField txtPassword;
-    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }
