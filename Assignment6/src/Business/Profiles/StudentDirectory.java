@@ -40,6 +40,19 @@ public class StudentDirectory {
             }
         }
             return null; //not found after going through the whole list
-         }
+    }
+    
+    public void removeStudent(String personId) {
+        for(int i = 0; i < studentlist.size(); i++) {
+            if(studentlist.get(i).isMatch(personId)) {
+                studentlist.remove(i);
+                return;
+            }
+        }
+    }
+    
+    public ArrayList<StudentProfile> getStudentList(){
+    return studentlist;
+    }
     
 }
