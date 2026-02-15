@@ -12,6 +12,7 @@ package Business.Person;
 public class Person {
 
     String id;
+    String nuid;
 
     public Person(String id) {
 
@@ -21,6 +22,14 @@ public class Person {
     public String getPersonId() {
         return id;
     }
+    
+    public String getNuid() {
+    return nuid;
+       }
+    
+    public void setNuid(String nuid) {
+    this.nuid = nuid;
+    } 
 
     public boolean isMatch(String id) {
         if (getPersonId().equals(id)) {

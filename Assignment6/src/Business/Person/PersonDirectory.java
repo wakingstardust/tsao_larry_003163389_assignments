@@ -37,6 +37,17 @@ public class PersonDirectory {
             }
         }
             return null; //not found after going through the whole list
-         }
+    }
+    
+    public Person findPersonByNuid(String nuid) {
+        for (Person p : personlist) {
+            if (p.getNuid() != null && p.getNuid().equals(nuid)) {
+                return p;
+            }
+        }
+        
+    return null;
+    
+    }
     
 }
