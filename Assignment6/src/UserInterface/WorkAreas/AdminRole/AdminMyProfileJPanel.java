@@ -179,7 +179,9 @@ public class AdminMyProfileJPanel extends javax.swing.JPanel {
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
 
+        AdminRoleWorkAreaJPanel adminPanel = new AdminRoleWorkAreaJPanel(business, CardSequencePanel);
         CardSequencePanel.removeAll();
+        CardSequencePanel.add("admin", adminPanel);
         CardSequencePanel.revalidate();
         CardSequencePanel.repaint();
 

@@ -6,13 +6,11 @@ package UserInterface.WorkAreas.AdminRole;
 
 import Business.Business;
 import Business.Profiles.FacultyProfile;
-import Business.Profiles.FacultyDirectory;
 import Business.Person.Person;
 import javax.swing.JPanel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
-import UserInterface.WorkAreas.AdminRole.AdminRoleWorkAreaJPanel;
 
 /**
  *
