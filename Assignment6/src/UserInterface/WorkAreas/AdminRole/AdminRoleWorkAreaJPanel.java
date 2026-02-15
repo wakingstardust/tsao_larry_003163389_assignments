@@ -18,6 +18,11 @@ import javax.swing.JPanel;
 
 import UserInterface.WorkAreas.AdminRole.ManageStudentsJPanel;
 import UserInterface.WorkAreas.AdminRole.ManageFacultyJPanel;
+import UserInterface.WorkAreas.AdminRole.AdminMyProfileJPanel;
+import Business.UserAccounts.UserAccount;
+import Business.Profiles.EmployeeProfile;
+import Business.Person.Person;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -55,6 +60,7 @@ public class AdminRoleWorkAreaJPanel extends javax.swing.JPanel {
         jButton10 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        btnPreregisterNUID = new javax.swing.JButton();
 
         setForeground(new java.awt.Color(51, 51, 51));
 
@@ -128,6 +134,20 @@ public class AdminRoleWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnPreregisterNUID.setBackground(new java.awt.Color(102, 153, 255));
+        btnPreregisterNUID.setFont(getFont());
+        btnPreregisterNUID.setForeground(new java.awt.Color(255, 255, 255));
+        btnPreregisterNUID.setText("Pre-register NUID");
+        btnPreregisterNUID.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPreregisterNUID.setMaximumSize(new java.awt.Dimension(145, 40));
+        btnPreregisterNUID.setMinimumSize(new java.awt.Dimension(20, 20));
+        btnPreregisterNUID.setPreferredSize(new java.awt.Dimension(240, 25));
+        btnPreregisterNUID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPreregisterNUIDIdentifyEventsActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -135,15 +155,14 @@ public class AdminRoleWorkAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(101, 101, 101)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(75, 75, 75)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(75, 75, 75)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnPreregisterNUID, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(632, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -158,7 +177,9 @@ public class AdminRoleWorkAreaJPanel extends javax.swing.JPanel {
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(54, 54, 54)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPreregisterNUID, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(127, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -193,6 +214,26 @@ public class AdminRoleWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton6IdentifyEventsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6IdentifyEventsActionPerformed
+        // TODO add your handling code here:
+        
+        UserAccount adminAccount = null;
+        EmployeeProfile adminProfile = null;
+
+        // Loop through all user accounts to find the admin
+        for(UserAccount ua : business.getUserAccountDirectory().getUserAccountList()){
+            if(ua.getRole().equals("Admin")){
+                adminAccount = ua;
+                adminProfile = (EmployeeProfile) ua.getAssociatedPersonProfile();
+                break;
+            }
+        }
+
+        // Create and show the profile panel
+        AdminMyProfileJPanel profilePanel = new AdminMyProfileJPanel(business, adminProfile, adminAccount, CardSequencePanel);
+        CardSequencePanel.removeAll();
+        CardSequencePanel.add("adminprofile", profilePanel);
+        ((java.awt.CardLayout) CardSequencePanel.getLayout()).next(CardSequencePanel);
+
     }//GEN-LAST:event_jButton6IdentifyEventsActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -204,8 +245,32 @@ public class AdminRoleWorkAreaJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_jButton9ActionPerformed
 
+    private void btnPreregisterNUIDIdentifyEventsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPreregisterNUIDIdentifyEventsActionPerformed
+        // TODO add your handling code here:
+        String nuid = JOptionPane.showInputDialog(this, "Enter NUID to pre-register:");
+        if(nuid == null || nuid.isEmpty()) return;
+
+        // Check if already exists
+        Person existing = business.getPersonDirectory().findPersonByNuid(nuid);
+        if(existing != null){
+            JOptionPane.showMessageDialog(this, 
+                "NUID already exists", 
+                "Error", 
+                JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Create person with empty name as placeholder
+        Person placeholder = business.getPersonDirectory().newPerson("");
+        placeholder.setNuid(nuid);
+
+        JOptionPane.showMessageDialog(this, 
+            "NUID " + nuid + " pre-registered. Student can now sign up with this NUID.");
+    }//GEN-LAST:event_btnPreregisterNUIDIdentifyEventsActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnPreregisterNUID;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;

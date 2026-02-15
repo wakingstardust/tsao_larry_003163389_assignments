@@ -23,6 +23,10 @@ public class Person {
         return id;
     }
     
+    public void setPersonId(String id) {
+        this.id = id;
+    }
+    
     public String getNuid() {
     return nuid;
        }

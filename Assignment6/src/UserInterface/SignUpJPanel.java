@@ -177,6 +177,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         String username = txtUsername.getText();
         String password = new String(txtPassword.getPassword());
 
+        // Validation - empty fields
         if(name.isEmpty() || nuid.isEmpty() || username.isEmpty() || password.isEmpty()){
             JOptionPane.showMessageDialog(this, 
                 "Please fill all fields", 
@@ -185,6 +186,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
             return;
         }
 
+        // Validation - password length
         if(password.length() < 4){
             JOptionPane.showMessageDialog(this, 
                 "Password must be at least 4 characters", 
@@ -193,6 +195,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
             return;
         }
 
+        // Check if username exists
         UserAccount existingUser = business.getUserAccountDirectory().findUserAccount(username);
         if(existingUser != null){
             JOptionPane.showMessageDialog(this, 
@@ -202,15 +205,35 @@ public class SignUpJPanel extends javax.swing.JPanel {
             return;
         }
 
+        // Check if NUID is pre-registered (empty name)
         Person existingPerson = business.getPersonDirectory().findPersonByNuid(nuid);
+        if(existingPerson != null && existingPerson.getPersonId().isEmpty()){
+            existingPerson.setPersonId(name);
+            StudentProfile newStudent = business.getStudentDirectory().newStudentProfile(existingPerson);
+            UserAccount newAccount = business.getUserAccountDirectory().newUserAccount(newStudent, username, password);
+
+            JOptionPane.showMessageDialog(this, 
+                "Account created successfully with pre-registered NUID!", 
+                "Success", 
+                JOptionPane.INFORMATION_MESSAGE);
+
+            txtName.setText("");
+            txtNUID.setText("");
+            txtUsername.setText("");
+            txtPassword.setText("");
+            return;
+        }
+
+        // Check if NUID already in use
         if(existingPerson != null){
             JOptionPane.showMessageDialog(this, 
-                "NUID already registered", 
+                "NUID already registered to another student", 
                 "Error", 
                 JOptionPane.ERROR_MESSAGE);
             return;
         }
 
+        // All checks passed - create new person
         Person newPerson = business.getPersonDirectory().newPerson(name);
         newPerson.setNuid(nuid);
 

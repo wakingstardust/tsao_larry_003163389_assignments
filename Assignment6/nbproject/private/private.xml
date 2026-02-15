@@ -5,16 +5,23 @@
         <group>
             <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/ConfigureABusiness.java</file>
             <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/Business/Person/Person.java</file>
-            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/SignUpJPanel.java</file>
             <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/Business/ProfileWorkAreaMainFrame.java</file>
+            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/StudentRole/StudentMyProfileJPanel.java</file>
+            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/FacultyRole/FacultyWorkAreaJPanel.java</file>
+            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/AdminRole/ManageFacultyJPanel.java</file>
+            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/AdminRole/AdministerUserAccountsWorkResp/ManageUserAccountsJPanel.java</file>
+            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/StudentRole/StudentWorkAreaJPanel.java</file>
+            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/AdminRole/ManageStudentsJPanel.java</file>
+            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/AdminRole/AdministerUserAccountsWorkResp/AdminUserAccount.java</file>
+            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/SignUpJPanel.java</file>
+            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/AdminRole/ManagePersonnelWorkResp/AdministerPersonJPanel.java</file>
             <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/Business/Profiles/StudentProfile.java</file>
             <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/Business/Profiles/StudentDirectory.java</file>
             <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/AdminRole/AdminRoleWorkAreaJPanel.java</file>
-            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/StudentRole/StudentMyProfileJPanel.java</file>
-            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/AdminRole/ManageFacultyJPanel.java</file>
+            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/AdminRole/ManagePersonnelWorkResp/ManagePersonsJPanel.java</file>
             <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/Business/Profiles/FacultyDirectory.java</file>
-            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/StudentRole/StudentWorkAreaJPanel.java</file>
-            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/AdminRole/ManageStudentsJPanel.java</file>
+            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/Business/UserAccounts/UserAccount.java</file>
+            <file>file:/Users/wakingstardust/Documents/GitHub/tsao_larry_003163389_assignments/Assignment6/src/UserInterface/WorkAreas/AdminRole/AdminMyProfileJPanel.java</file>
         </group>
     </open-files>
 </project-private>
