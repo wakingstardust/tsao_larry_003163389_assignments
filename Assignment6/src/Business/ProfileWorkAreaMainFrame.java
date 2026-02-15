@@ -155,6 +155,7 @@ public class ProfileWorkAreaMainFrame extends javax.swing.JFrame {
         if (useraccount == null) {
             return;
         }
+        useraccount.updateLastAccess();
         StudentWorkAreaJPanel studentworkareajpanel;
         FacultyWorkAreaJPanel facultyworkarea;
         AdminRoleWorkAreaJPanel adminworkarea;

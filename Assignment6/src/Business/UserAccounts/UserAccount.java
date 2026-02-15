@@ -7,6 +7,9 @@ package Business.UserAccounts;
 
 import Business.Profiles.Profile;
 
+import java.util.Date;
+
+
 
 
 /**
@@ -18,12 +21,16 @@ public class UserAccount {
     Profile profile;
     String username;
     String password;
+    Date lastAccess;
+    Date accountCreated;
     
     public UserAccount (Profile profile, String un, String pw){
         username = un;
-         password = pw;
-         this.profile = profile;
+        password = pw;
+        this.profile = profile;
+        this.accountCreated = new Date();
 
+    
     }
 
     public String getPersonId(){
@@ -55,6 +62,18 @@ public class UserAccount {
         public String toString(){
             
             return getUserLoginName();
+        }
+        
+        public void updateLastAccess(){
+            this.lastAccess = new Date();
+        }
+        
+        public Date getLastAccess(){
+            return lastAccess;
+        }
+        
+        public Date getAccountCreated(){
+            return accountCreated;
         }
         
 }
