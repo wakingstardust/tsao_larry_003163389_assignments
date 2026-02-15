@@ -32,10 +32,10 @@ public class StudentMyProfileJPanel extends javax.swing.JPanel {
         
     }
     
-    private void display() {
+        private void display() {
         // Populate text fields with student data
         txtName.setText(studentProfile.getPerson().getPersonId());
-        
+
         String nuid = studentProfile.getPerson().getNuid();
         if(nuid != null && !nuid.isEmpty()){
             txtNUID.setText(nuid);

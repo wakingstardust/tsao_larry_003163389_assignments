@@ -17,6 +17,7 @@ import UserInterface.WorkAreas.AdminRole.ManagePersonnelWorkResp.ManagePersonsJP
 import javax.swing.JPanel;
 
 import UserInterface.WorkAreas.AdminRole.ManageStudentsJPanel;
+import UserInterface.WorkAreas.AdminRole.ManageFacultyJPanel;
 
 
 /**
@@ -195,6 +196,12 @@ public class AdminRoleWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton6IdentifyEventsActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        
+        ManageFacultyJPanel panel = new ManageFacultyJPanel(business, CardSequencePanel);
+        CardSequencePanel.add("managefaculty", panel);
+        ((java.awt.CardLayout) CardSequencePanel.getLayout()).next(CardSequencePanel);
+
     }//GEN-LAST:event_jButton9ActionPerformed
 
 

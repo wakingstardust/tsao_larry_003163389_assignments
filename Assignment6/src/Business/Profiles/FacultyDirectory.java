@@ -37,4 +37,15 @@ public class FacultyDirectory {
     public ArrayList<FacultyProfile> getFacultyList(){
         return facultylist;
     }
+
+    public void removeFaculty(String personId) {
+        for(int i = 0; i < facultylist.size(); i++) {
+            if(facultylist.get(i).isMatch(personId)) {
+                facultylist.remove(i);
+                return;
+            }
+        }
+    }  
+    
+    
 }
