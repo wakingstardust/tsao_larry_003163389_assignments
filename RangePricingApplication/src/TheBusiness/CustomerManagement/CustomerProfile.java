@@ -75,6 +75,10 @@ public class CustomerProfile extends Profile {
         orders.add(o);
     }
 
+    public ArrayList<Order> getOrders() {
+        return orders;
+    }
+
     @Override
     public String toString() {
         return person.getPersonId();
