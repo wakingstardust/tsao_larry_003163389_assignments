@@ -15,7 +15,20 @@ public class CustomerSummary {
     CustomerProfile customer;
     int ordertotal;
     public CustomerSummary(CustomerProfile cp){
+        customer = cp;
+        ordertotal = 0;
+        for (Order o : cp.orders) {
+            ordertotal = ordertotal + o.getOrderTotal();
+        }
         
+    }
+    
+    public String getCustomerName() {
+        return customer.getPerson().getPersonId();
+    }
+
+    public int getTotalSales() {
+        return ordertotal;
     }
     
     
