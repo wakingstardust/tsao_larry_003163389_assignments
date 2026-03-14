@@ -44,7 +44,7 @@ public class SupplierSummary {
             int spendingForThisCustomer = 0;
 
             for (Order o : cp.getOrders()) {
-                for (OrderItem oi : o.orderitems) {
+                for (OrderItem oi : o.getOrderItems()) {
                     if (supplierProducts.contains(oi.getSelectedProduct())) {
                         spendingForThisCustomer = spendingForThisCustomer + oi.getOrderItemTotal();
                     }

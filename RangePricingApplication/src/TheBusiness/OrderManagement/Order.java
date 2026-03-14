@@ -81,10 +81,16 @@ public class Order {
         else {return false;}
         
     }
-public void CancelOrder(){
-    status = "Cancelled";
-}
-public void Submit(){
-    status = "Submitted";
-}
-}
+    
+    public ArrayList<OrderItem> getOrderItems() {
+        return orderitems;
+    }
+    
+    public void CancelOrder(){
+        status = "Cancelled";
+    }
+    
+    public void Submit(){
+        status = "Submitted";
+    }
+    }
