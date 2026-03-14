@@ -4,17 +4,31 @@
  */
 package UserInterface.Main.WorkSpaceProfiles;
 
+import TheBusiness.Business.Business;
+import TheBusiness.CustomerManagement.CustomerSummary;
+import TheBusiness.CustomerManagement.CustomersReport;
+import TheBusiness.ProductManagement.Product;
+import TheBusiness.Supplier.Supplier;
+import TheBusiness.Supplier.SupplierReport;
+import TheBusiness.Supplier.SupplierSummary;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author wakingstardust
  */
 public class ReportViewerJPanel extends javax.swing.JPanel {
+    
+    Business business;
 
     /**
      * Creates new form ReportViewerJPanel
      */
-    public ReportViewerJPanel() {
+    public ReportViewerJPanel(Business b) {
+        
+        business = b;
         initComponents();
+        populateTable();
     }
 
     /**
@@ -26,19 +40,137 @@ public class ReportViewerJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        reportSelector = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        reportTable = new javax.swing.JTable();
+
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 20)); // NOI18N
+        jLabel1.setText("Performance Reports");
+
+        reportSelector.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Report 1 - Most Expensive Products", "Report 2 - Most Valuable Customers", "Report 3 - Supplier Report" }));
+        reportSelector.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reportSelectorActionPerformed(evt);
+            }
+        });
+
+        reportTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(reportTable);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addComponent(reportSelector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(214, 214, 214)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(reportSelector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void reportSelectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportSelectorActionPerformed
+        
+        populateTable();
 
+    }//GEN-LAST:event_reportSelectorActionPerformed
+
+    
+    public void populateTable() {
+        int selected = reportSelector.getSelectedIndex();
+        DefaultTableModel tableModel = (DefaultTableModel) reportTable.getModel();
+        tableModel.setRowCount(0);
+        tableModel.setColumnCount(0);
+
+        if (selected == 0) {
+            tableModel.addColumn("Product Name");
+            tableModel.addColumn("Supplier Name");
+            tableModel.addColumn("Product Price");
+
+            for (Supplier s : business.getSupplierDirectory().getSuplierList()) {
+                for (Product p : s.getProductCatalog().getProductList()) {
+                    Object[] row = new Object[3];
+                    row[0] = p.toString();
+                    row[1] = s.getName();
+                    row[2] = p.getTargetPrice();
+                    tableModel.addRow(row);
+                }
+            }
+            reportTable.setAutoCreateRowSorter(true);
+        }
+
+        if (selected == 1) {
+            tableModel.addColumn("Customer Name");
+            tableModel.addColumn("Total Sales");
+
+            CustomersReport report = business.getCustomerDirectory().generatCustomerPerformanceReport();
+            for (CustomerSummary cs : report.getSortedList()) {
+                Object[] row = new Object[2];
+                row[0] = cs.getCustomerName();
+                row[1] = cs.getTotalSales();
+                tableModel.addRow(row);
+            }
+        }
+
+        if (selected == 2) {
+            tableModel.addColumn("Supplier Name");
+            tableModel.addColumn("Total Sales");
+            tableModel.addColumn("Loyalty Score");
+            tableModel.addColumn("Avg Spending Per Customer");
+            tableModel.addColumn("Top 5 Sales Score");
+
+            SupplierReport report = new SupplierReport();
+            for (Supplier s : business.getSupplierDirectory().getSuplierList()) {
+                SupplierSummary ss = new SupplierSummary(s, business.getCustomerDirectory().getCustomerList());
+                report.addSupplierSummary(ss);
+            }
+
+            for (SupplierSummary ss : report.getSupplierList()) {
+                Object[] row = new Object[5];
+                row[0] = ss.getSupplierName();
+                row[1] = ss.getTotalSales();
+                row[2] = ss.getLoyaltyScore();
+                row[3] = ss.getAvgSpendingPerCustomer();
+                row[4] = ss.getTop5SalesScore();
+                tableModel.addRow(row);
+            }
+        }
+    }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JComboBox<String> reportSelector;
+    private javax.swing.JTable reportTable;
     // End of variables declaration//GEN-END:variables
 }
